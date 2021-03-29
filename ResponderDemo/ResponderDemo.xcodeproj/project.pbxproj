@@ -16,6 +16,7 @@
 		5BB7D6B0260830830021A71E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB7D6AF260830830021A71E /* main.m */; };
 		5BB7D6BA260830830021A71E /* ResponderDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB7D6B9260830830021A71E /* ResponderDemoTests.m */; };
 		5BB7D6C5260830840021A71E /* ResponderDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB7D6C4260830840021A71E /* ResponderDemoUITests.m */; };
+		5BD7C3752611E04E00A17BEE /* HitTestingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BD7C3742611E04E00A17BEE /* HitTestingView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		5BB7D6C0260830840021A71E /* ResponderDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ResponderDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BB7D6C4260830840021A71E /* ResponderDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResponderDemoUITests.m; sourceTree = "<group>"; };
 		5BB7D6C6260830840021A71E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BD7C3732611E04E00A17BEE /* HitTestingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HitTestingView.h; sourceTree = "<group>"; };
+		5BD7C3742611E04E00A17BEE /* HitTestingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HitTestingView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,8 @@
 				5BB7D6A1260830810021A71E /* SceneDelegate.m */,
 				5BB7D6A3260830810021A71E /* ViewController.h */,
 				5BB7D6A4260830810021A71E /* ViewController.m */,
+				5BD7C3732611E04E00A17BEE /* HitTestingView.h */,
+				5BD7C3742611E04E00A17BEE /* HitTestingView.m */,
 				5BB7D6A6260830810021A71E /* Main.storyboard */,
 				5BB7D6A9260830830021A71E /* Assets.xcassets */,
 				5BB7D6AB260830830021A71E /* LaunchScreen.storyboard */,
@@ -268,6 +273,7 @@
 			files = (
 				5BB7D6A5260830810021A71E /* ViewController.m in Sources */,
 				5BB7D69F260830810021A71E /* AppDelegate.m in Sources */,
+				5BD7C3752611E04E00A17BEE /* HitTestingView.m in Sources */,
 				5BB7D6B0260830830021A71E /* main.m in Sources */,
 				5BB7D6A2260830810021A71E /* SceneDelegate.m in Sources */,
 			);

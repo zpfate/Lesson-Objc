@@ -16,11 +16,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+  
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
-    NSLog(@"touches == %@", touches);
+    NSLog(@"touches count == %lu\n touches == %@" , (unsigned long)touches.count, touches);
 }
+
 
 @end
