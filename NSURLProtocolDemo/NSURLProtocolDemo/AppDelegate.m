@@ -6,7 +6,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "TFURLProtocol.h"
 @interface AppDelegate ()
 
 @end
@@ -16,6 +16,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [NSURLProtocol registerClass:[TFURLProtocol class]];
     return YES;
 }
 

@@ -6,8 +6,11 @@
 //
 
 #import "ViewController.h"
+#import <WebKit/WebKit.h>
+@interface ViewController ()<WKNavigationDelegate>
 
-@interface ViewController ()
+@property (nonatomic, strong) WKWebView *wkWebView;
+
 
 @end
 
@@ -16,7 +19,33 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+//    WKWebViewConfiguration *configuration = [[WKWebViewConfiguration alloc] init];
+//    WKWebView *webView = [[WKWebView alloc] initWithFrame:CGRectZero configuration:configuration];
+//    webView.navigationDelegate = self;
+//    [self.view addSubview:webView];
+
+    [self requestBaidu];
 }
+
+
+- (void)requestBaidu {
+    
+    NSURL *url = [NSURL URLWithString:@"https://www.baidu.com"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    NSURLSession *session = [NSURLSession sharedSession];
+    NSURLSessionDataTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        
+        NSLog(@"response == %@", response);
+    }];
+    
+    [task resume];
+}
+
+#pragma mark -- Delegate
+
+
+
 
 
 @end
