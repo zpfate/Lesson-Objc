@@ -9,7 +9,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TFURLProtocol : NSURLProtocol
+@interface TFCustomerURLProtocol : NSURLProtocol
+
++ (void)start;
+
 
 @end
 

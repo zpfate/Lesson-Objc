@@ -6,18 +6,20 @@
 //
 
 #import "AppDelegate.h"
-#import "TFURLProtocol.h"
+#import "TFCustomerURLProtocol.h"
 @interface AppDelegate ()
 
 @end
 
-@implementation AppDelegate
+static NSString * TFRequestURLProtocolKey = @"TFRequestURLProtocolKey";
 
+@implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    [NSURLProtocol registerClass:[TFURLProtocol class]];
+    [TFCustomerURLProtocol start];
+    
     return YES;
 }
 

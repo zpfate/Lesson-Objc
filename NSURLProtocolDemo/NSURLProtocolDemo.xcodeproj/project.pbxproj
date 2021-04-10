@@ -16,7 +16,7 @@
 		5B63B986261E9CDE00D795EC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B63B985261E9CDE00D795EC /* main.m */; };
 		5B63B990261E9CDE00D795EC /* NSURLProtocolDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B63B98F261E9CDE00D795EC /* NSURLProtocolDemoTests.m */; };
 		5B63B99B261E9CDF00D795EC /* NSURLProtocolDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B63B99A261E9CDF00D795EC /* NSURLProtocolDemoUITests.m */; };
-		5B63B9AD261EACBC00D795EC /* TFURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B63B9AC261EACBC00D795EC /* TFURLProtocol.m */; };
+		5B63B9AD261EACBC00D795EC /* TFCustomerURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B63B9AC261EACBC00D795EC /* TFCustomerURLProtocol.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,8 +55,8 @@
 		5B63B996261E9CDF00D795EC /* NSURLProtocolDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSURLProtocolDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B63B99A261E9CDF00D795EC /* NSURLProtocolDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSURLProtocolDemoUITests.m; sourceTree = "<group>"; };
 		5B63B99C261E9CDF00D795EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5B63B9AB261EACBC00D795EC /* TFURLProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFURLProtocol.h; sourceTree = "<group>"; };
-		5B63B9AC261EACBC00D795EC /* TFURLProtocol.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFURLProtocol.m; sourceTree = "<group>"; };
+		5B63B9AB261EACBC00D795EC /* TFCustomerURLProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFCustomerURLProtocol.h; sourceTree = "<group>"; };
+		5B63B9AC261EACBC00D795EC /* TFCustomerURLProtocol.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFCustomerURLProtocol.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,8 +113,8 @@
 				5B63B977261E9CDB00D795EC /* SceneDelegate.m */,
 				5B63B979261E9CDB00D795EC /* ViewController.h */,
 				5B63B97A261E9CDB00D795EC /* ViewController.m */,
-				5B63B9AB261EACBC00D795EC /* TFURLProtocol.h */,
-				5B63B9AC261EACBC00D795EC /* TFURLProtocol.m */,
+				5B63B9AB261EACBC00D795EC /* TFCustomerURLProtocol.h */,
+				5B63B9AC261EACBC00D795EC /* TFCustomerURLProtocol.m */,
 				5B63B97C261E9CDC00D795EC /* Main.storyboard */,
 				5B63B97F261E9CDE00D795EC /* Assets.xcassets */,
 				5B63B981261E9CDE00D795EC /* LaunchScreen.storyboard */,
@@ -271,7 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B63B9AD261EACBC00D795EC /* TFURLProtocol.m in Sources */,
+				5B63B9AD261EACBC00D795EC /* TFCustomerURLProtocol.m in Sources */,
 				5B63B97B261E9CDB00D795EC /* ViewController.m in Sources */,
 				5B63B975261E9CDB00D795EC /* AppDelegate.m in Sources */,
 				5B63B986261E9CDE00D795EC /* main.m in Sources */,
