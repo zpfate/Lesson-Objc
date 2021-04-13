@@ -28,7 +28,8 @@ static NSString *TFCusomterProtocolKey = @"TFCusomterProtocolKey";
     
     if (shouldAccept) {
         /// 防止递归调用
-//        shouldAccept = ![NSURLProtocol propertyForKey:TFCusomterProtocolKey inRequest:request];
+        shouldAccept = ![self propertyForKey:TFCusomterProtocolKey inRequest:request];
+        NSLog(@"url == %@", request.URL);
     }
     
     if (shouldAccept) {
@@ -60,7 +61,7 @@ static NSString *TFCusomterProtocolKey = @"TFCusomterProtocolKey";
 - (void)startLoading {
     
     NSMutableURLRequest *recursiveRequest = [[self request] mutableCopy];
-//    [[self class] setProperty:@YES forKey:TFCusomterProtocolKey inRequest:recursiveRequest];
+    [[self class] setProperty:@YES forKey:TFCusomterProtocolKey inRequest:recursiveRequest];
 }
 
 /// 停止相应请求

@@ -26,6 +26,9 @@
 //    [self.view addSubview:webView];
 
     [self requestBaidu];
+    
+    
+    
 }
 
 
