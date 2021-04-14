@@ -8,6 +8,10 @@
 #import "TFCustomerURLProtocol.h"
 
 
+@interface TFCustomerURLProtocol ()<NSURLSessionDataDelegate>
+
+@end
+
 static NSString *TFCusomterProtocolKey = @"TFCusomterProtocolKey";
 
 @implementation TFCustomerURLProtocol
@@ -29,11 +33,9 @@ static NSString *TFCusomterProtocolKey = @"TFCusomterProtocolKey";
     if (shouldAccept) {
         /// 防止递归调用
         shouldAccept = ![self propertyForKey:TFCusomterProtocolKey inRequest:request];
-        NSLog(@"url == %@", request.URL);
     }
     
     if (shouldAccept) {
-        
         NSString *scheme = url.scheme;
         shouldAccept = [scheme isEqualToString:@"http"];
     }
@@ -62,6 +64,10 @@ static NSString *TFCusomterProtocolKey = @"TFCusomterProtocolKey";
     
     NSMutableURLRequest *recursiveRequest = [[self request] mutableCopy];
     [[self class] setProperty:@YES forKey:TFCusomterProtocolKey inRequest:recursiveRequest];
+    
+    NSURLSession *session = [NSURLSession sharedSession];
+    NSURLSessionDataTask *task = = [session ]
+    
 }
 
 /// 停止相应请求
