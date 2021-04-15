@@ -10,6 +10,8 @@
 
 @interface TFCustomerURLProtocol ()<NSURLSessionDataDelegate>
 
+@property (nonatomic, strong) NSURLSession *session;
+
 @end
 
 static NSString *TFCusomterProtocolKey = @"TFCusomterProtocolKey";
@@ -48,15 +50,23 @@ static NSString *TFCusomterProtocolKey = @"TFCusomterProtocolKey";
 /// @param request 请求
 + (NSURLRequest *)canonicalRequestForRequest:(NSURLRequest *)request {
     
+    /// 如果是http请求改成https
+    if ([request.URL.scheme isEqualToString:@"http"]) {
+        NSMutableURLRequest *mutableRequest = [request mutableCopy];
+        NSString *urlString = mutableRequest.URL.absoluteString;
+        urlString = [urlString stringByReplacingOccurrencesOfString:@"http" withString:@"https"];
+        mutableRequest.URL = [NSURL URLWithString:urlString];
+        return mutableRequest;
+    }
     return request;
 }
 
-
 /// 此方法抽象类提供了默认实现,重写可以直接调用父类
-/// @param a <#a description#>
-/// @param b <#b description#>
+/// 一般不做特殊处理, 直接返回父类实现
 + (BOOL)requestIsCacheEquivalent:(NSURLRequest *)a toRequest:(NSURLRequest *)b {
-    return [super requestIsCacheEquivalent:a toRequest:b];
+    
+    BOOL result = [super requestIsCacheEquivalent:a toRequest:b];
+    return result;
 }
 
 /// 开始网络请求
@@ -65,14 +75,48 @@ static NSString *TFCusomterProtocolKey = @"TFCusomterProtocolKey";
     NSMutableURLRequest *recursiveRequest = [[self request] mutableCopy];
     [[self class] setProperty:@YES forKey:TFCusomterProtocolKey inRequest:recursiveRequest];
     
-    NSURLSession *session = [NSURLSession sharedSession];
-    NSURLSessionDataTask *task = = [session ]
+    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
     
+    NSMutableArray *protocolClasses = [configuration.protocolClasses mutableCopy];
+    [protocolClasses addObject:self];
+    configuration.protocolClasses = @[self.class];
+    
+    self.session = [NSURLSession sessionWithConfiguration:configuration delegate:self delegateQueue:nil];
+    NSURLSessionDataTask *task = [self.session dataTaskWithRequest:recursiveRequest];
+    [task resume];
 }
 
 /// 停止相应请求
 - (void)stopLoading {
     
+    [self.session invalidateAndCancel];
+    self.session = nil;
+}
+
+
+#pragma mark -- NSURLSessionDataDelegate
+
+/// 接收到服务响应时调用的方法
+- (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveResponse:(NSURLResponse *)response completionHandler:(void (^)(NSURLSessionResponseDisposition))completionHandler {
+    [[self client] URLProtocol:self didReceiveResponse:response cacheStoragePolicy:NSURLCacheStorageAllowed];
+    
+    completionHandler(NSURLSessionResponseAllow);
+}
+
+///接收到服务器返回数据的时候会调用该方法，如果数据较大那么该方法可能会调用多次
+- (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveData:(NSData *)data {
+    [[self client] URLProtocol:self didLoadData:data];
+}
+
+/// 当请求完成(成功|失败)的时候会调用该方法，如果请求失败，则error有值
+- (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error {
+    
+    if (error) {
+        [[self client] URLProtocol:self didFailWithError:error];
+    } else {
+        [[self client] URLProtocolDidFinishLoading:self];
+
+    }
 }
 
 
