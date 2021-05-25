@@ -20,6 +20,7 @@
 
 - (IBAction)goFlutter:(id)sender {
     
+    NSLog(@"click");
 }
 
 @end
