@@ -186,9 +186,11 @@
 			buildConfigurationList = 5B15D7F5265CE78D006BEB72 /* Build configuration list for PBXNativeTarget "FlutterDemo" */;
 			buildPhases = (
 				E8FD0EB4E12C188BD34E5285 /* [CP] Check Pods Manifest.lock */,
+				D3630BF3733A8B3165CFBB44 /* [CP-User] Run Flutter Build flutter_native_module Script */,
 				5B15D7C2265CE789006BEB72 /* Sources */,
 				5B15D7C3265CE789006BEB72 /* Frameworks */,
 				5B15D7C4265CE789006BEB72 /* Resources */,
+				A7CBDD309039ABB497E0CE57 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -226,6 +228,7 @@
 				5B15D7E8265CE78D006BEB72 /* Sources */,
 				5B15D7E9265CE78D006BEB72 /* Frameworks */,
 				5B15D7EA265CE78D006BEB72 /* Resources */,
+				1057F3CEFF9085DEAE4860A3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -306,6 +309,40 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1057F3CEFF9085DEAE4860A3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FlutterDemo-FlutterDemoUITests/Pods-FlutterDemo-FlutterDemoUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FlutterDemo-FlutterDemoUITests/Pods-FlutterDemo-FlutterDemoUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FlutterDemo-FlutterDemoUITests/Pods-FlutterDemo-FlutterDemoUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A7CBDD309039ABB497E0CE57 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FlutterDemo/Pods-FlutterDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FlutterDemo/Pods-FlutterDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FlutterDemo/Pods-FlutterDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B7F03E8BACCF4D8E304010C5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -349,6 +386,16 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		D3630BF3733A8B3165CFBB44 /* [CP-User] Run Flutter Build flutter_native_module Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "[CP-User] Run Flutter Build flutter_native_module Script";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nset -u\nsource \"${SRCROOT}/../flutter_native_module/.ios/Flutter/flutter_export_environment.sh\"\nexport VERBOSE_SCRIPT_LOGGING=1 && \"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh build";
 		};
 		E8FD0EB4E12C188BD34E5285 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

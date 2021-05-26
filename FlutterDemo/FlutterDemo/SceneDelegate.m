@@ -6,8 +6,9 @@
 //
 
 #import "SceneDelegate.h"
-#import ""
+#import <GeneratedPluginRegistrant.h>
 @interface SceneDelegate ()
+
 
 @end
 
@@ -20,7 +21,12 @@
     // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
     
     
+    /// 运行flutter engine
+    self.flutterEngine = [[FlutterEngine alloc] initWithName:@"my flutter engine"];
+    [self.flutterEngine run];
     
+    /// 链接插件
+    [GeneratedPluginRegistrant registerWithRegistry:self.flutterEngine];
     
 }
 

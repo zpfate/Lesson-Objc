@@ -6,10 +6,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Flutter/Flutter.h>
 
 @interface SceneDelegate : UIResponder <UIWindowSceneDelegate>
 
 @property (strong, nonatomic) UIWindow * window;
+
+@property (nonatomic, strong) FlutterEngine *flutterEngine;
+
 
 @end
 

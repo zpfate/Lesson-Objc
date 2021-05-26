@@ -6,7 +6,8 @@
 //
 
 #import "ViewController.h"
-
+#import "SceneDelegate.h"
+#import <Flutter/Flutter.h>
 @interface ViewController ()
 
 @end
@@ -20,7 +21,10 @@
 
 - (IBAction)goFlutter:(id)sender {
     
-    NSLog(@"click");
+    
+    FlutterViewController *flutterViewController =
+        [[FlutterViewController alloc] initWithProject:<#(nullable FlutterDartProject *)#> nibName:<#(nullable NSString *)#> bundle:<#(nullable NSBundle *)#>
+    [self presentViewController:flutterViewController animated:YES completion:nil];
 }
 
 @end
