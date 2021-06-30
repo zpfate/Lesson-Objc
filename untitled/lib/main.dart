@@ -1,54 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'dart:ui' as ui;
-
-const String _kReloadChannelName = 'reload';
-const BasicMessageChannel<String> _kReloadChannel =
-BasicMessageChannel<String>(_kReloadChannelName, StringCodec());
 
 void main() {
   runApp(MyApp());
-  _kReloadChannel.setMessageHandler(run);
-  // Start off with whatever the initial route is supposed to be.
-  run(ui.window.defaultRouteName);
 }
-
-Future<String> run(String? name) async{
-  // The platform-specific component will call [setInitialRoute] on the Flutter
-  // view (or view controller for iOS) to set [ui.window.defaultRouteName].
-  // We then dispatch based on the route names to show different Flutter
-  // widgets.
-  // Since we don't really care about Flutter-side navigation in this app, we're
-  // not using a regular routes map.
-  switch (name) {
-    case "test":
-      runApp(MyApp(title: "我是路由测试test00",));
-      break;
-    case "test1":
-      runApp(MyApp(title: "我是路由测试test01",));
-      break;
-    case "test2":
-      runApp(MyApp(title: "我是路由测试test02",));
-      break;
-    default:
-      runApp(MyApp());
-      break;
-  }
-  return '';
-}
-
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
-
-  MyApp({this.title = ""});
-
-  final String title;
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: title,
+      title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -56,11 +17,12 @@ class MyApp extends StatelessWidget {
         // application has a blue toolbar. Then, without quitting the app, try
         // changing the primarySwatch below to Colors.green and then invoke
         // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or press Run > Flutter Hot Reload in a Flutter IDE). Notice that the
-        // counter didn't reset back to zero; the application is not restarted.
+        // or simply save your changes to "hot reload" in a Flutter IDE).
+        // Notice that the counter didn't reset back to zero; the application
+        // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: title),
+      home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
@@ -111,35 +73,12 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
-      body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
-        child: Column(
-          // Column is also a layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
-          //
-          // Invoke "debug painting" (press "p" in the console, choose the
-          // "Toggle Debug Paint" action from the Flutter Inspector in Android
-          // Studio, or the "Toggle Debug Paint" command in Visual Studio Code)
-          // to see the wireframe for each widget.
-          //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ],
-        ),
+      body: Stack(
+        children: [
+          Container(height: 30, color: Colors.red,),
+          Container(height: 30, color: Colors.green,),
+          Container(height: 30, color: Colors.cyanAccent,),
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
