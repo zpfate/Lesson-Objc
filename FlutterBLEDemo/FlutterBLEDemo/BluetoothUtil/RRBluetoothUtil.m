@@ -58,21 +58,20 @@
 
 /// 发现外设服务
 - (void)discoverServices {
-    
     /// FFFF 花纹尺
     /// FFE0 巡检工具
     if (self.peripheral.state == CBPeripheralStateConnected) {
-        self.peripheral discoverServices:<#(nullable NSArray<CBUUID *> *)#>
+        CBUUID *rulerUDID = [CBUUID UUIDWithString:@"FFFF"];
+        CBUUID *checkUDID = [CBUUID UUIDWithString:@"FFE0"];
+        [self.peripheral discoverServices:@[rulerUDID, checkUDID]];
     }
 }
 
 /// 发现服务下的特征值
 - (void)discoverCharacteristics {
-    
     /// 花纹尺的时候读取特征值FF00
-    
     if (self.peripheral.state == CBPeripheralStateConnected) {
-        self.peripheral discoverCharacteristics:nil forService:<#(nonnull CBService *)#>
+        [self.peripheral discoverCharacteristics:nil forService:nil];
     }
 }
 
@@ -121,7 +120,7 @@
     /// 智慧部门那边目前的规则是扫描到第一个就链接
     if ([peripheralName hasPrefix:@"zhilun_"]) {
         self.peripheral = peripheral;
-        
+        /// 扫描应该链接的设备就停止扫描
         [self stopScan];
     }
 }
@@ -134,6 +133,33 @@
 
 #pragma mark -- CBPeripheralDelegate
 
+/// 发现服务
+- (void)peripheral:(CBPeripheral *)peripheral didDiscoverServices:(NSError *)error {
+    if (!error) {
+        
+    } else {
+        NSLog(@"discover service failed, error = %@", error);
+    }
+}
+
+/// 发现服务下特征值
+- (void)peripheral:(CBPeripheral *)peripheral didDiscoverCharacteristicsForService:(CBService *)service error:(NSError *)error {
+    if (!error) {
+        
+    } else {
+        NSLog(@"discover characteristics for service %@ failed, error = %@", service, error);
+    }
+}
+
+/// 写入特征值
+- (void)peripheral:(CBPeripheral *)peripheral didWriteValueForCharacteristic:(CBCharacteristic *)characteristic error:(NSError *)error {
+    
+}
+
+/// 收到特征值改变
+- (void)peripheral:(CBPeripheral *)peripheral didUpdateValueForCharacteristic:(CBCharacteristic *)characteristic error:(NSError *)error {
+    
+}
 
 
 @end

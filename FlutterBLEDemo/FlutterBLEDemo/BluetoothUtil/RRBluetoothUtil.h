@@ -8,6 +8,12 @@
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
+typedef NS_ENUM(NSUInteger, RRBluetoothUtilType) {
+    RRBluetoothUtilTypeRuler,
+    <#MyEnumValueB#>,
+    <#MyEnumValueC#>,
+};
+
 
 @interface RRBluetoothUtil : NSObject
 
