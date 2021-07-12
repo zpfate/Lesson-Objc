@@ -61,17 +61,19 @@
     /// FFFF 花纹尺
     /// FFE0 巡检工具
     if (self.peripheral.state == CBPeripheralStateConnected) {
-        CBUUID *rulerUDID = [CBUUID UUIDWithString:@"FFFF"];
-        CBUUID *checkUDID = [CBUUID UUIDWithString:@"FFE0"];
-        [self.peripheral discoverServices:@[rulerUDID, checkUDID]];
+        self.peripheral.delegate = self;
+        [self.peripheral discoverServices:nil];
+    } else {
+        [self startConnectPeripheral];
     }
 }
 
 /// 发现服务下的特征值
-- (void)discoverCharacteristics {
+- (void)discoverCharacteristics:(CBService *)service {
     /// 花纹尺的时候读取特征值FF00
     if (self.peripheral.state == CBPeripheralStateConnected) {
-        [self.peripheral discoverCharacteristics:nil forService:nil];
+        CBUUID *rulerId = [CBUUID UUIDWithString:@"FF00"];
+        [self.peripheral discoverCharacteristics:@[rulerId] forService:service];
     }
 }
 
@@ -96,6 +98,7 @@
             break;
         case CBManagerStatePoweredOn:
             /// 蓝牙打开状态
+            [self startScan];
             break;
         case CBManagerStatePoweredOff:
             /// 蓝牙关闭状态
@@ -117,18 +120,29 @@
 - (void)centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary<NSString *,id> *)advertisementData RSSI:(NSNumber *)RSSI {
     
     NSString *peripheralName = peripheral.name;
+    NSLog(@"scan peripheral name = %@, localName = %@", peripheralName, advertisementData[CBAdvertisementDataLocalNameKey]);
     /// 智慧部门那边目前的规则是扫描到第一个就链接
-    if ([peripheralName hasPrefix:@"zhilun_"]) {
+    if ([peripheralName hasPrefix:@"Calipers"]) {
+        /// @"zhilun_"
         self.peripheral = peripheral;
         /// 扫描应该链接的设备就停止扫描
         [self stopScan];
+        
+        [self startConnectPeripheral];
     }
 }
 
 /// 链接上外设
 - (void)centralManager:(CBCentralManager *)central didConnectPeripheral:(CBPeripheral *)peripheral {
     
+    NSLog(@"connect success, peripheral name = %@", peripheral.name);
     
+    [self discoverServices];
+}
+
+/// 链接外设失败
+- (void)centralManager:(CBCentralManager *)central didFailToConnectPeripheral:(CBPeripheral *)peripheral error:(NSError *)error {
+    NSLog(@"connect failed, error = %@", error);
 }
 
 #pragma mark -- CBPeripheralDelegate
@@ -136,7 +150,16 @@
 /// 发现服务
 - (void)peripheral:(CBPeripheral *)peripheral didDiscoverServices:(NSError *)error {
     if (!error) {
-        
+        for (CBService *service in peripheral.services) {
+            
+            NSString *uuidString = service.UUID.UUIDString;
+            if ([uuidString isEqualToString:@"FFFF"]) {
+                /// 花纹尺特征值
+                [peripheral discoverCharacteristics:nil forService:service];
+            } else if ([uuidString isEqualToString:@"FFE0"]) {
+                [peripheral discoverCharacteristics:nil forService:service];
+            }
+        }
     } else {
         NSLog(@"discover service failed, error = %@", error);
     }
@@ -145,13 +168,21 @@
 /// 发现服务下特征值
 - (void)peripheral:(CBPeripheral *)peripheral didDiscoverCharacteristicsForService:(CBService *)service error:(NSError *)error {
     if (!error) {
-        
+        /// 发现特征值
+        for (CBCharacteristic *characteristic in service.characteristics) {
+            
+            NSString *uuidString = characteristic.UUID.UUIDString;
+            if ([uuidString isEqualToString:@"FF00"]) {
+                /// 花纹尺的特征
+                [peripheral setNotifyValue:YES forCharacteristic:characteristic];
+            }
+        }
     } else {
         NSLog(@"discover characteristics for service %@ failed, error = %@", service, error);
     }
 }
 
-/// 写入特征值
+/// 写入特征值时回调
 - (void)peripheral:(CBPeripheral *)peripheral didWriteValueForCharacteristic:(CBCharacteristic *)characteristic error:(NSError *)error {
     
 }
@@ -159,7 +190,31 @@
 /// 收到特征值改变
 - (void)peripheral:(CBPeripheral *)peripheral didUpdateValueForCharacteristic:(CBCharacteristic *)characteristic error:(NSError *)error {
     
+    NSData *value = characteristic.value;
+    if (value.length >= 8) {
+        int length = [self bytesTointFromData:value range:NSMakeRange(3, 4)];
+        NSLog(@"length == %d", length);
+    }
 }
 
+- (int)bytesTointFromData:(NSData *)data range:(NSRange)range {
+    
+    Byte bytes[range.length];
+    [data getBytes:bytes range:range];
+    int length = [self bytesToInt:bytes count:(int)range.length];
+    return length;
+}
+
+- (int)bytesToInt:(Byte[])b count:(int)count{
+    int mask=0xff;
+    int temp=0;
+    int n=0;
+    for(int i=0;i<count;i++){
+        n<<=8;
+        temp=b[i]&mask;
+        n|=temp;
+    }
+    return n;
+}
 
 @end

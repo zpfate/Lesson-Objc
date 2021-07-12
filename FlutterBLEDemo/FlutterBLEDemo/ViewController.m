@@ -6,7 +6,7 @@
 //
 
 #import "ViewController.h"
-
+#import "RRBluetoothUtil.h"
 @interface ViewController ()
 
 @end
@@ -16,6 +16,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+- (IBAction)startConnect:(id)sender {
+    
+    [[RRBluetoothUtil shared] initBluetooth];
 }
 
 
