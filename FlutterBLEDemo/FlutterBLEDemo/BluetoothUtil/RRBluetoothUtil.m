@@ -13,6 +13,9 @@
 
 @property (nonatomic, strong) CBPeripheral *peripheral;
 
+@property (nonatomic, strong) CBCharacteristic *writeCBCharacteristic;
+
+@property (nonatomic, copy) void(^receiveDataBlock)(NSData *value);
 @end
 
 @implementation RRBluetoothUtil
@@ -44,7 +47,7 @@
 /// 链接设备
 - (void)startConnectPeripheral {
     
-    if (self.peripheral.state == CBPeripheralStateDisconnected) {
+    if (self.peripheral && self.peripheral.state == CBPeripheralStateDisconnected) {
         [self.manager connectPeripheral:self.peripheral options:nil];
     }
 }
@@ -77,6 +80,11 @@
     }
 }
 
+///
+- (void)disconnect {
+    [self.manager cancelPeripheralConnection:self.peripheral];
+}
+
 - (void)readValue {
     /**
      前缀 faaf
@@ -84,6 +92,16 @@
      结尾 feef
      */
     
+}
+
+- (void)writeValue:(NSData *)value {
+    
+    [self.peripheral writeValue:value forCharacteristic:self.writeCBCharacteristic type:CBCharacteristicWriteWithResponse];
+}
+
+
+- (void)setReceiveDataBlock:(void (^)(NSData * _Nonnull))receiveDataBlock {
+    _receiveDataBlock = receiveDataBlock;
 }
 
 
@@ -127,7 +145,6 @@
         self.peripheral = peripheral;
         /// 扫描应该链接的设备就停止扫描
         [self stopScan];
-        
         [self startConnectPeripheral];
     }
 }
@@ -175,6 +192,13 @@
             if ([uuidString isEqualToString:@"FF00"]) {
                 /// 花纹尺的特征
                 [peripheral setNotifyValue:YES forCharacteristic:characteristic];
+                break;
+            }
+            if (characteristic.properties & CBCharacteristicPropertyWrite && characteristic.properties & CBCharacteristicPropertyRead && characteristic.properties & CBCharacteristicPropertyNotify &&
+                (characteristic.properties & CBCharacteristicPropertyNotify ||
+                 characteristic.properties & CBCharacteristicPropertyIndicate)
+                ) {
+                self.writeCBCharacteristic = characteristic;
             }
         }
     } else {
@@ -195,6 +219,10 @@
         int length = [self bytesTointFromData:value range:NSMakeRange(3, 4)];
         NSLog(@"length == %d", length);
     }
+    if (self.receiveDataBlock) {
+        self.receiveDataBlock(value);
+    }
+    
 }
 
 - (int)bytesTointFromData:(NSData *)data range:(NSRange)range {

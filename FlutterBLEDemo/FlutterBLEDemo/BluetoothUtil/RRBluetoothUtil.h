@@ -17,6 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface RRBluetoothUtil : NSObject
 
+
+
 + (instancetype)shared;
 
 - (void)initBluetooth;
@@ -27,9 +29,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)stopScan;
 
-- (void)discoverServices;
+- (void)writeValue:(NSData *)value;
 
-- (void)discoverCharacteristics;
+- (void)setReceiveDataBlock:(void (^ _Nonnull)(NSData * _Nonnull))receiveDataBlock;
+
 
 @end
 
