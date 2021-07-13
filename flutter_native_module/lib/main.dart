@@ -2,14 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'dart:ui' as ui;
 
-const String _kReloadChannelName = 'reload';
-const BasicMessageChannel<String> _kReloadChannel =
-BasicMessageChannel<String>(_kReloadChannelName, StringCodec());
 
 void main() {
   runApp(MyApp());
-  _kReloadChannel.setMessageHandler(run);
-  // Start off with whatever the initial route is supposed to be.
+
+
+
+  
   run(ui.window.defaultRouteName);
 }
 

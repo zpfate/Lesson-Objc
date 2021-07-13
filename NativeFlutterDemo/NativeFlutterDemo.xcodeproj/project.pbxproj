@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		4D91B18950D9D9FD5D51B6AC /* Pods_NativeFlutterDemo_NativeFlutterDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FF69C9819BF68DE47C77546 /* Pods_NativeFlutterDemo_NativeFlutterDemoUITests.framework */; };
+		5B369E5E269DC633000CDDA8 /* FlutterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B369E5D269DC633000CDDA8 /* FlutterManager.m */; };
 		5BEB4061265F2B14003B13CC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEB4060265F2B14003B13CC /* AppDelegate.m */; };
 		5BEB4064265F2B14003B13CC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEB4063265F2B14003B13CC /* ViewController.m */; };
 		5BEB4067265F2B14003B13CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BEB4065265F2B14003B13CC /* Main.storyboard */; };
@@ -42,6 +43,8 @@
 		1BAAA64DABA8BF5CA91DCF81 /* Pods_NativeFlutterDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NativeFlutterDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		495587AF84DF6892C825F03F /* Pods_NativeFlutterDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NativeFlutterDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B382018E9B22640C7F9A3C5 /* Pods-NativeFlutterDemo-NativeFlutterDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NativeFlutterDemo-NativeFlutterDemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-NativeFlutterDemo-NativeFlutterDemoUITests/Pods-NativeFlutterDemo-NativeFlutterDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5B369E5C269DC633000CDDA8 /* FlutterManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlutterManager.h; sourceTree = "<group>"; };
+		5B369E5D269DC633000CDDA8 /* FlutterManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlutterManager.m; sourceTree = "<group>"; };
 		5BEB405C265F2B14003B13CC /* NativeFlutterDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NativeFlutterDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BEB405F265F2B14003B13CC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5BEB4060265F2B14003B13CC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -132,6 +135,8 @@
 				5BEB4060265F2B14003B13CC /* AppDelegate.m */,
 				5BEB4062265F2B14003B13CC /* ViewController.h */,
 				5BEB4063265F2B14003B13CC /* ViewController.m */,
+				5B369E5C269DC633000CDDA8 /* FlutterManager.h */,
+				5B369E5D269DC633000CDDA8 /* FlutterManager.m */,
 				5BEB4065265F2B14003B13CC /* Main.storyboard */,
 				5BEB4068265F2B16003B13CC /* Assets.xcassets */,
 				5BEB406A265F2B16003B13CC /* LaunchScreen.storyboard */,
@@ -169,7 +174,6 @@
 				66A447B100E37FB3DB7B5FB2 /* Pods-NativeFlutterDemoTests.debug.xcconfig */,
 				61117914B7BBEB040937C5A7 /* Pods-NativeFlutterDemoTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -421,6 +425,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B369E5E269DC633000CDDA8 /* FlutterManager.m in Sources */,
 				5BEB4064265F2B14003B13CC /* ViewController.m in Sources */,
 				5BEB406F265F2B16003B13CC /* main.m in Sources */,
 				5BEB4061265F2B14003B13CC /* AppDelegate.m in Sources */,
