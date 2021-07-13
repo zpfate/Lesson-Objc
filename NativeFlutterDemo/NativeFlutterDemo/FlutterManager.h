@@ -13,6 +13,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (id)copy NS_UNAVAILABLE;
 - (id)mutableCopy NS_UNAVAILABLE;
++ (instancetype)shared;
+- (void)initMessageChannel;
+- (void)presentFlutterViewController;
 @end
 
 NS_ASSUME_NONNULL_END

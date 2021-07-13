@@ -23,18 +23,8 @@ static NSString *const _kReloadChannelName = @"reload";
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
-    /// 运行flutter engine
-    self.flutterEngine = [[FlutterEngine alloc] initWithName:@"my flutter engine"];
-    [self.flutterEngine run];
-        
-    self.controller = [[FlutterViewController alloc] initWithEngine:self.flutterEngine nibName:nil bundle:nil];
-    
-    /// 链接插件
-    [GeneratedPluginRegistrant registerWithRegistry:self.flutterEngine];
-    
-    self.channel = [[FlutterBasicMessageChannel alloc] initWithName:_kReloadChannelName binaryMessenger:self.flutterEngine.binaryMessenger codec:FlutterStringCodec.sharedInstance];
-    
+    unsigned int commandId = 0xfafafa;
+       NSData *commandIdData = [NSData dataWithBytes:&commandId length:4];
     return YES;
 }
 

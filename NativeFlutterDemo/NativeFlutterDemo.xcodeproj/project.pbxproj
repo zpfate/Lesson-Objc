@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		4D91B18950D9D9FD5D51B6AC /* Pods_NativeFlutterDemo_NativeFlutterDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FF69C9819BF68DE47C77546 /* Pods_NativeFlutterDemo_NativeFlutterDemoUITests.framework */; };
 		5B369E5E269DC633000CDDA8 /* FlutterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B369E5D269DC633000CDDA8 /* FlutterManager.m */; };
-		5BEB4061265F2B14003B13CC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEB4060265F2B14003B13CC /* AppDelegate.m */; };
+		5B369E5F269DD709000CDDA8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEB4060265F2B14003B13CC /* AppDelegate.m */; };
 		5BEB4064265F2B14003B13CC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEB4063265F2B14003B13CC /* ViewController.m */; };
 		5BEB4067265F2B14003B13CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BEB4065265F2B14003B13CC /* Main.storyboard */; };
 		5BEB4069265F2B16003B13CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BEB4068265F2B16003B13CC /* Assets.xcassets */; };
@@ -425,10 +425,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B369E5F269DD709000CDDA8 /* AppDelegate.m in Sources */,
 				5B369E5E269DC633000CDDA8 /* FlutterManager.m in Sources */,
 				5BEB4064265F2B14003B13CC /* ViewController.m in Sources */,
 				5BEB406F265F2B16003B13CC /* main.m in Sources */,
-				5BEB4061265F2B14003B13CC /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
