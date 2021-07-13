@@ -1,0 +1,5 @@
+${PODS_ROOT}/Target Support Files/Pods-NativeFlutterDemo/Pods-NativeFlutterDemo-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Toast/Toast.framework
+${PODS_ROOT}/../../flutter_native_module/.ios/Flutter/App.framework
+${BUILT_PRODUCTS_DIR}/fluttertoast/fluttertoast.framework
+${PODS_XCFRAMEWORKS_BUILD_DIR}/Flutter/Flutter.framework/Flutter
