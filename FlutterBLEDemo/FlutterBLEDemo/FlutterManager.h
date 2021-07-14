@@ -12,7 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FlutterManager : NSObject
 @property (nonatomic, strong) FlutterEngine *engine;
-@property (nonatomic, strong) FlutterBasicMessageChannel *messageChannel;
+@property (strong, nonatomic) FlutterBasicMessageChannel *messageChannel;
+@property (nonatomic, strong) FlutterBasicMessageChannel *bluetoothMessageChannel;
 + (instancetype)shared;
 - (void)initFlutterEngine;
 @end

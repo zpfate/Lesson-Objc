@@ -7,6 +7,7 @@
 
 #import "RRBluetoothUtil.h"
 #import <CoreBluetooth/CoreBluetooth.h>
+#import "FlutterManager.h"
 @interface RRBluetoothUtil ()<CBCentralManagerDelegate, CBPeripheralDelegate>
 
 @property (nonatomic, strong) CBCentralManager *manager;
@@ -15,7 +16,11 @@
 
 @property (nonatomic, strong) CBCharacteristic *writeCBCharacteristic;
 
+@property (nonatomic, copy) void(^connectBlock)(NSDictionary *res);
+
 @property (nonatomic, copy) void(^receiveDataBlock)(NSData *value);
+
+@property (nonatomic, strong) NSString *devicePrefix;
 @end
 
 @implementation RRBluetoothUtil
@@ -31,7 +36,8 @@
 }
 
 /// 初始化蓝牙
-- (void)initBluetooth {
+- (void)initBluetooth:(NSString *)devicePrefix {
+    self.devicePrefix = devicePrefix;
     /// 初始化中心设备
     self.manager = [[CBCentralManager alloc]  initWithDelegate:self queue:nil];
 }
@@ -105,32 +111,55 @@
 }
 
 
+/**
+ *  code :
+ *  10000  成功
+ *  10001 无蓝牙权限
+ *  10002 蓝牙未打开
+ *  10003 链接失败
+ *  10004 该设备不支持蓝牙
+ *
+ *  10009 未知错误
+ *  data : 返回数据
+ */
+
 #pragma mark -- CBCentralManagerDelegate
 
 /// 中心设备的状态变更
 - (void)centralManagerDidUpdateState:(CBCentralManager *)central {
     
     switch (central.state) {
-        case CBManagerStateUnknown:
-            /// 未知状态
-            break;
+      
         case CBManagerStatePoweredOn:
             /// 蓝牙打开状态
             [self startScan];
             break;
-        case CBManagerStatePoweredOff:
-            /// 蓝牙关闭状态
-            break;
         case CBManagerStateUnauthorized:
             /// 蓝牙未授权
+            [self handleConnect:10001];
+            break;
+        case CBManagerStatePoweredOff:
+            /// 蓝牙关闭状态
+            [self handleConnect:10002];
             break;
         case CBManagerStateUnsupported:
             /// 不支持BLE
+            [self handleConnect:10004];
             break;
         case CBManagerStateResetting:
             break;
+        case CBManagerStateUnknown:
+            /// 未知状态
+            [self handleConnect:10009];
+            break;
         default:
             break;
+    }
+}
+
+- (void)handleConnect:(NSInteger)code {
+    if (self.connectBlock) {
+        self.connectBlock(@{@"code": @(code)});
     }
 }
 
@@ -140,7 +169,7 @@
     NSString *peripheralName = peripheral.name;
     NSLog(@"scan peripheral name = %@, localName = %@", peripheralName, advertisementData[CBAdvertisementDataLocalNameKey]);
     /// 智慧部门那边目前的规则是扫描到第一个就链接
-    if ([peripheralName hasPrefix:@"Calipers"]) {
+    if ([peripheralName hasPrefix:self.devicePrefix]) {
         /// @"zhilun_"
         self.peripheral = peripheral;
         /// 扫描应该链接的设备就停止扫描
@@ -151,14 +180,19 @@
 
 /// 链接上外设
 - (void)centralManager:(CBCentralManager *)central didConnectPeripheral:(CBPeripheral *)peripheral {
-    
+
     NSLog(@"connect success, peripheral name = %@", peripheral.name);
-    
+    [self handleConnect:10000];
     [self discoverServices];
+}
+
+- (void)centralManager:(CBCentralManager *)central didDisconnectPeripheral:(CBPeripheral *)peripheral error:(NSError *)error {
+    [self handleConnect:10005];
 }
 
 /// 链接外设失败
 - (void)centralManager:(CBCentralManager *)central didFailToConnectPeripheral:(CBPeripheral *)peripheral error:(NSError *)error {
+    [self handleConnect:10003];
     NSLog(@"connect failed, error = %@", error);
 }
 
@@ -215,15 +249,13 @@
 - (void)peripheral:(CBPeripheral *)peripheral didUpdateValueForCharacteristic:(CBCharacteristic *)characteristic error:(NSError *)error {
     
     NSData *value = characteristic.value;
-    if (value.length >= 8) {
-        int length = [self bytesTointFromData:value range:NSMakeRange(3, 4)];
-        NSLog(@"length == %d", length);
-    }
-    if (self.receiveDataBlock) {
-        self.receiveDataBlock(value);
-    }
+    FlutterStandardTypedData *data = [FlutterStandardTypedData typedDataWithBytes:value];
+    [[FlutterManager shared].bluetoothMessageChannel sendMessage:@{@"data":data}];
     
 }
+
+
+
 
 - (int)bytesTointFromData:(NSData *)data range:(NSRange)range {
     
@@ -233,11 +265,11 @@
     return length;
 }
 
-- (int)bytesToInt:(Byte[])b count:(int)count{
+- (int)bytesToInt:(Byte[])b count:(int) count{
     int mask=0xff;
     int temp=0;
     int n=0;
-    for(int i=0;i<count;i++){
+    for(int i=0; i<count; i++){
         n<<=8;
         temp=b[i]&mask;
         n|=temp;

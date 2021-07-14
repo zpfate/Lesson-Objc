@@ -28,36 +28,34 @@
     
     self.engine = [[FlutterEngine alloc] initWithName:@"com.zhilunkeji.flutter.engine"];
     [self.engine run];
-
     self.messageChannel = [FlutterBasicMessageChannel messageChannelWithName:@"com.zhilunkeji.message.channel" binaryMessenger:self.engine.binaryMessenger];
     [GeneratedPluginRegistrant registerWithRegistry:self.engine];
-    
     [self.messageChannel setMessageHandler:^(id  _Nullable message, FlutterReply  _Nonnull callback) {
+        NSDictionary *dict = (NSDictionary *)message;
+
+    }];
+
+    self.bluetoothMessageChannel = [FlutterBasicMessageChannel messageChannelWithName:@"com.zhilunkeji.messagechannel.bluetooth" binaryMessenger:self.engine.binaryMessenger];
+    
+    [self.bluetoothMessageChannel setMessageHandler:^(id  _Nullable message, FlutterReply  _Nonnull callback) {
         
         /// 接收到flutter通信
         NSDictionary *dict = (NSDictionary *)message;
-        
         if ([dict[@"type"] isEqualToString:@"bluetooth"]) {
             /// 蓝牙
             NSString *methodName = dict[@"method"];
             RRBluetoothUtil *bluetoothUtil = [RRBluetoothUtil shared];
-            [bluetoothUtil setReceiveDataBlock:^(NSData * _Nonnull value) {
-                NSMutableDictionary *response = [NSMutableDictionary  dictionary];
-                response[@"code"] = @(10000);
-                response[@"data"] = value;
-                callback(response);
-            }];
-            
             if ([methodName isEqualToString:@"init"]) {
-                [bluetoothUtil initBluetooth];
-                NSMutableDictionary *response = [NSMutableDictionary dictionary];
-                response[@"code"] = @(10000);
-                callback(response);
+                [bluetoothUtil initBluetooth:dict[@"prefix"]];
+                [bluetoothUtil setConnectBlock:^(NSDictionary * _Nonnull res) {
+                    callback(res);
+                }];
+
             } else if ([methodName isEqualToString:@"startConnect"]){
                 [bluetoothUtil startConnectPeripheral];
             } else if ([methodName isEqualToString:@"sendData"]) {
-                NSData *data = dict[@"data"];
-                [bluetoothUtil writeValue:data];
+                FlutterStandardTypedData *data = dict[@"data"];
+                [bluetoothUtil writeValue:data.data];
             }
         }
     }];
