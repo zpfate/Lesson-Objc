@@ -6,15 +6,12 @@ import 'dart:ui' as ui;
 import 'package:flutter_native_module/basic_message_util.dart';
 import 'package:flutter_native_module/command_data.dart';
 
-
 void main() {
-
   runApp(MyApp());
   BasicMessageUtil.initMessageChannel();
-
 }
 
-Future<String> run(String? name) async{
+Future<String> run(String? name) async {
   // The platform-specific component will call [setInitialRoute] on the Flutter
   // view (or view controller for iOS) to set [ui.window.defaultRouteName].
   // We then dispatch based on the route names to show different Flutter
@@ -23,13 +20,19 @@ Future<String> run(String? name) async{
   // not using a regular routes map.
   switch (name) {
     case "test":
-      runApp(MyApp(title: "我是路由测试test00",));
+      runApp(MyApp(
+        title: "我是路由测试test00",
+      ));
       break;
     case "test1":
-      runApp(MyApp(title: "我是路由测试test01",));
+      runApp(MyApp(
+        title: "我是路由测试test01",
+      ));
       break;
     case "test2":
-      runApp(MyApp(title: "我是路由测试test02",));
+      runApp(MyApp(
+        title: "我是路由测试test02",
+      ));
       break;
     default:
       runApp(MyApp());
@@ -37,7 +40,6 @@ Future<String> run(String? name) async{
   }
   return '';
 }
-
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
@@ -51,7 +53,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: title,
       theme: ThemeData(
-
         primarySwatch: Colors.blue,
       ),
       home: MyHomePage(title: title),
@@ -81,7 +82,6 @@ class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
 
   void _incrementCounter() {
-
     Uint8List uint8list = CommandData.getCommandData();
     BasicMessageUtil.sendMessage(uint8list);
 

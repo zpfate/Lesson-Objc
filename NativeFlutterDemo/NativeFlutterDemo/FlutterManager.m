@@ -37,7 +37,6 @@
     [self.messageChannel setMessageHandler:^(id  _Nullable message, FlutterReply  _Nonnull callback) {
         FlutterStandardTypedData *data = message;
         NSLog(@"message === %@", data.data);
-        callback(@"yes");
     }];
 }
 
@@ -45,7 +44,6 @@
 - (void)presentFlutterViewController {
     
     FlutterViewController *flutterVC = [[FlutterViewController alloc] initWithEngine:self.engine nibName:nil bundle:nil];
-    
     AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     UIViewController *vc = delegate.window.rootViewController;
     [vc presentViewController:flutterVC animated:YES completion:nil];
