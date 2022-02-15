@@ -7,7 +7,6 @@
 
 #import "FlutterManager.h"
 #import "AppDelegate.h"
-#import "TFFlutterViewController.h"
 @interface FlutterManager ()
 @property (nonatomic, strong) FlutterEngine *engine;
 @property (nonatomic, strong) FlutterBasicMessageChannel *messageChannel;
@@ -44,8 +43,7 @@
 
 - (void)presentFlutterViewController {
     
-    TFFlutterViewController *flutterVC = [[TFFlutterViewController alloc] initWithEngine:self.engine nibName:nil bundle:nil];
-    flutterVC.modalPresentationStyle = UIModalPresentationFullScreen;
+    FlutterViewController *flutterVC = [[FlutterViewController alloc] initWithEngine:self.engine nibName:nil bundle:nil];
     AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     UIViewController *vc = delegate.window.rootViewController;
     [vc presentViewController:flutterVC animated:YES completion:nil];
