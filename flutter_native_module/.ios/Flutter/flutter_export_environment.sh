@@ -1,7 +1,8 @@
 #!/bin/sh
 # This is a generated file; do not edit or check into version control.
-export "FLUTTER_ROOT=/Users/twistedfate/flutter"
-export "FLUTTER_APPLICATION_PATH=/Users/twistedfate/Desktop/TwistedFate/GitHub/BlogDemo-iOS/flutter_native_module"
+export "FLUTTER_ROOT=/Volumes/TwistedFateHD/Environment/flutter/flutter_new"
+export "FLUTTER_APPLICATION_PATH=/Volumes/TwistedFateHD/GitHub/BlogDemo-iOS/flutter_native_module"
+export "COCOAPODS_PARALLEL_CODE_SIGN=true"
 export "FLUTTER_TARGET=lib/main.dart"
 export "FLUTTER_BUILD_DIR=build"
 export "SYMROOT=${SOURCE_ROOT}/../build/ios"

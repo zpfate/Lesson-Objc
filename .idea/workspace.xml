@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="12d3879b-4b07-4b2d-8c29-f959c55497b5" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1vwPPeQxUk6vAVXhtYdT8rhwEz0" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="12d3879b-4b07-4b2d-8c29-f959c55497b5" name="Default Changelist" comment="" />
+      <created>1627470155306</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1627470155306</updated>
+    </task>
+    <task id="LOCAL-00001" summary="xx">
+      <created>1627470185074</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1627470185074</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="xx" />
+    <option name="LAST_COMMIT_MESSAGE" value="xx" />
+    <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="693" y="380" key="#Notifications" timestamp="1627470206192">
+      <screen x="0" y="25" width="1920" height="1055" />
+    </state>
+    <state x="693" y="380" key="#Notifications/0.25.1920.1055@0.25.1920.1055" timestamp="1627470206192" />
+    <state x="514" y="132" key="CommitChangelistDialog2" timestamp="1627470679305">
+      <screen x="0" y="25" width="1920" height="1055" />
+    </state>
+    <state x="514" y="132" key="CommitChangelistDialog2/0.25.1920.1055@0.25.1920.1055" timestamp="1627470679305" />
+    <state x="212" y="117" key="MergeDialog" timestamp="1627470276296">
+      <screen x="0" y="25" width="1920" height="1055" />
+    </state>
+    <state x="212" y="117" key="MergeDialog/0.25.1920.1055@0.25.1920.1055" timestamp="1627470276296" />
+    <state x="608" y="318" key="MultipleFileMergeDialog" timestamp="1627470707541">
+      <screen x="0" y="25" width="1920" height="1055" />
+    </state>
+    <state x="608" y="318" key="MultipleFileMergeDialog/0.25.1920.1055@0.25.1920.1055" timestamp="1627470707541" />
+    <state x="580" y="289" key="Vcs.Push.Dialog.v2" timestamp="1627470698072">
+      <screen x="0" y="25" width="1920" height="1055" />
+    </state>
+    <state x="580" y="289" key="Vcs.Push.Dialog.v2/0.25.1920.1055@0.25.1920.1055" timestamp="1627470698072" />
+    <state x="766" y="470" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1627470665894">
+      <screen x="0" y="25" width="1920" height="1055" />
+    </state>
+    <state x="766" y="470" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.25.1920.1055@0.25.1920.1055" timestamp="1627470665894" />
+  </component>
+</project>

@@ -7,6 +7,7 @@
 
 #import "ViewController.h"
 #import "FlutterManager.h"
+#import <StoreKit/StoreKit.h>
 @interface ViewController ()
 
 @end
@@ -17,6 +18,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [[FlutterManager shared] initMessageChannel];
+    
 }
 
 - (IBAction)goFlutter:(id)sender {

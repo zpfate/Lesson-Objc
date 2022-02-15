@@ -10,6 +10,7 @@
 		4D91B18950D9D9FD5D51B6AC /* Pods_NativeFlutterDemo_NativeFlutterDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FF69C9819BF68DE47C77546 /* Pods_NativeFlutterDemo_NativeFlutterDemoUITests.framework */; };
 		5B369E5E269DC633000CDDA8 /* FlutterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B369E5D269DC633000CDDA8 /* FlutterManager.m */; };
 		5B369E5F269DD709000CDDA8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEB4060265F2B14003B13CC /* AppDelegate.m */; };
+		5B7DA02526B79AD900B7856F /* TFFlutterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B7DA02426B79AD800B7856F /* TFFlutterViewController.m */; };
 		5BEB4064265F2B14003B13CC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEB4063265F2B14003B13CC /* ViewController.m */; };
 		5BEB4067265F2B14003B13CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BEB4065265F2B14003B13CC /* Main.storyboard */; };
 		5BEB4069265F2B16003B13CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BEB4068265F2B16003B13CC /* Assets.xcassets */; };
@@ -45,6 +46,8 @@
 		4B382018E9B22640C7F9A3C5 /* Pods-NativeFlutterDemo-NativeFlutterDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NativeFlutterDemo-NativeFlutterDemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-NativeFlutterDemo-NativeFlutterDemoUITests/Pods-NativeFlutterDemo-NativeFlutterDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5B369E5C269DC633000CDDA8 /* FlutterManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlutterManager.h; sourceTree = "<group>"; };
 		5B369E5D269DC633000CDDA8 /* FlutterManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlutterManager.m; sourceTree = "<group>"; };
+		5B7DA02326B79AD800B7856F /* TFFlutterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFFlutterViewController.h; sourceTree = "<group>"; };
+		5B7DA02426B79AD800B7856F /* TFFlutterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFFlutterViewController.m; sourceTree = "<group>"; };
 		5BEB405C265F2B14003B13CC /* NativeFlutterDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NativeFlutterDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BEB405F265F2B14003B13CC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5BEB4060265F2B14003B13CC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -135,6 +138,8 @@
 				5BEB4060265F2B14003B13CC /* AppDelegate.m */,
 				5BEB4062265F2B14003B13CC /* ViewController.h */,
 				5BEB4063265F2B14003B13CC /* ViewController.m */,
+				5B7DA02326B79AD800B7856F /* TFFlutterViewController.h */,
+				5B7DA02426B79AD800B7856F /* TFFlutterViewController.m */,
 				5B369E5C269DC633000CDDA8 /* FlutterManager.h */,
 				5B369E5D269DC633000CDDA8 /* FlutterManager.m */,
 				5BEB4065265F2B14003B13CC /* Main.storyboard */,
@@ -429,6 +434,7 @@
 				5B369E5E269DC633000CDDA8 /* FlutterManager.m in Sources */,
 				5BEB4064265F2B14003B13CC /* ViewController.m in Sources */,
 				5BEB406F265F2B16003B13CC /* main.m in Sources */,
+				5B7DA02526B79AD900B7856F /* TFFlutterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
