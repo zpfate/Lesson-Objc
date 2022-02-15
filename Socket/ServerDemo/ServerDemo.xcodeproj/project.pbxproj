@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		5B6AE70527BB413800341A0B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6AE70427BB413800341A0B /* AppDelegate.m */; };
 		5B6AE70827BB413800341A0B /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6AE70727BB413800341A0B /* SceneDelegate.m */; };
-		5B6AE70B27BB413800341A0B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6AE70A27BB413800341A0B /* ViewController.m */; };
 		5B6AE70E27BB413800341A0B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B6AE70C27BB413800341A0B /* Main.storyboard */; };
 		5B6AE71027BB413B00341A0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B6AE70F27BB413B00341A0B /* Assets.xcassets */; };
 		5B6AE71327BB413B00341A0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B6AE71127BB413B00341A0B /* LaunchScreen.storyboard */; };
@@ -17,6 +16,8 @@
 		5B6AE72027BB413C00341A0B /* ServerDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6AE71F27BB413C00341A0B /* ServerDemoTests.m */; };
 		5B6AE72A27BB413C00341A0B /* ServerDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6AE72927BB413C00341A0B /* ServerDemoUITests.m */; };
 		5B6AE72C27BB413C00341A0B /* ServerDemoUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6AE72B27BB413C00341A0B /* ServerDemoUITestsLaunchTests.m */; };
+		5B6AE73A27BB7AD200341A0B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6AE73927BB7AD200341A0B /* ViewController.m */; };
+		5B6AE73D27BB7B1300341A0B /* ServerSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6AE73C27BB7B1300341A0B /* ServerSocket.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,8 +43,6 @@
 		5B6AE70427BB413800341A0B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		5B6AE70627BB413800341A0B /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		5B6AE70727BB413800341A0B /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		5B6AE70927BB413800341A0B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		5B6AE70A27BB413800341A0B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		5B6AE70D27BB413800341A0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5B6AE70F27BB413B00341A0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B6AE71227BB413B00341A0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,6 +53,10 @@
 		5B6AE72527BB413C00341A0B /* ServerDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ServerDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B6AE72927BB413C00341A0B /* ServerDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ServerDemoUITests.m; sourceTree = "<group>"; };
 		5B6AE72B27BB413C00341A0B /* ServerDemoUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ServerDemoUITestsLaunchTests.m; sourceTree = "<group>"; };
+		5B6AE73827BB7AD200341A0B /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ../../SocketDemo/SocketDemo/ViewController.h; sourceTree = "<group>"; };
+		5B6AE73927BB7AD200341A0B /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ../../SocketDemo/SocketDemo/ViewController.m; sourceTree = "<group>"; };
+		5B6AE73B27BB7B1300341A0B /* ServerSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServerSocket.h; path = ../../SocketDemo/SocketDemo/ServerSocket.h; sourceTree = "<group>"; };
+		5B6AE73C27BB7B1300341A0B /* ServerSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ServerSocket.m; path = ../../SocketDemo/SocketDemo/ServerSocket.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,8 +111,10 @@
 				5B6AE70427BB413800341A0B /* AppDelegate.m */,
 				5B6AE70627BB413800341A0B /* SceneDelegate.h */,
 				5B6AE70727BB413800341A0B /* SceneDelegate.m */,
-				5B6AE70927BB413800341A0B /* ViewController.h */,
-				5B6AE70A27BB413800341A0B /* ViewController.m */,
+				5B6AE73B27BB7B1300341A0B /* ServerSocket.h */,
+				5B6AE73C27BB7B1300341A0B /* ServerSocket.m */,
+				5B6AE73827BB7AD200341A0B /* ViewController.h */,
+				5B6AE73927BB7AD200341A0B /* ViewController.m */,
 				5B6AE70C27BB413800341A0B /* Main.storyboard */,
 				5B6AE70F27BB413B00341A0B /* Assets.xcassets */,
 				5B6AE71127BB413B00341A0B /* LaunchScreen.storyboard */,
@@ -266,9 +271,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B6AE70B27BB413800341A0B /* ViewController.m in Sources */,
+				5B6AE73D27BB7B1300341A0B /* ServerSocket.m in Sources */,
 				5B6AE70527BB413800341A0B /* AppDelegate.m in Sources */,
 				5B6AE71627BB413B00341A0B /* main.m in Sources */,
+				5B6AE73A27BB7AD200341A0B /* ViewController.m in Sources */,
 				5B6AE70827BB413800341A0B /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
