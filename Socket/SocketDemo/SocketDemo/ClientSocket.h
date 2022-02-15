@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface ClientSocket : NSObject
 + (instancetype)shared;
 
-- (void)start;
+- (void)startConnect:(NSString *)host port:(NSString *)port;
 
 - (void)sendMessage:(NSString *)message;
 
