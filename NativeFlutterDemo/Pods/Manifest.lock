@@ -1,0 +1,42 @@
+PODS:
+  - Flutter (1.0.0)
+  - flutter_native_module (0.0.1):
+    - Flutter
+  - FlutterPluginRegistrant (0.0.1):
+    - Flutter
+    - fluttertoast
+  - fluttertoast (0.0.2):
+    - Flutter
+    - Toast
+  - Toast (4.0.0)
+
+DEPENDENCIES:
+  - Flutter (from `../flutter_native_module/.ios/Flutter/engine`)
+  - flutter_native_module (from `../flutter_native_module/.ios/Flutter`)
+  - FlutterPluginRegistrant (from `../flutter_native_module/.ios/Flutter/FlutterPluginRegistrant`)
+  - fluttertoast (from `../flutter_native_module/.ios/.symlinks/plugins/fluttertoast/ios`)
+
+SPEC REPOS:
+  trunk:
+    - Toast
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: "../flutter_native_module/.ios/Flutter/engine"
+  flutter_native_module:
+    :path: "../flutter_native_module/.ios/Flutter"
+  FlutterPluginRegistrant:
+    :path: "../flutter_native_module/.ios/Flutter/FlutterPluginRegistrant"
+  fluttertoast:
+    :path: "../flutter_native_module/.ios/.symlinks/plugins/fluttertoast/ios"
+
+SPEC CHECKSUMS:
+  Flutter: ac41d61a47ae5bf8195a5598d2d63754888ec0d5
+  flutter_native_module: 9447d602a376f501340670f7c097a25019d17194
+  FlutterPluginRegistrant: 3f0b8077e2055fddc6e6a895fbaba7c62d9ab1fd
+  fluttertoast: 6122fa75143e992b1d3470f61000f591a798cc58
+  Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
+
+PODFILE CHECKSUM: 0227a52ed3c75425e2d7d29cb5fd8bc6c2bd0dbc
+
+COCOAPODS: 1.10.0

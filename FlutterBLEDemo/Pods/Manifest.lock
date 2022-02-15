@@ -1,0 +1,69 @@
+PODS:
+  - Flutter (1.0.0)
+  - FlutterPluginRegistrant (0.0.1):
+    - Flutter
+    - fluttertoast
+    - path_provider
+    - shared_preferences
+    - sqflite
+  - fluttertoast (0.0.2):
+    - Flutter
+    - Toast
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
+  - path_provider (0.0.1):
+    - Flutter
+  - shared_preferences (0.0.1):
+    - Flutter
+  - sqflite (0.0.2):
+    - Flutter
+    - FMDB (>= 2.7.5)
+  - Toast (4.0.0)
+  - zhilun_merchant_flutter_module (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - Flutter (from `../../../GitLab/zhilun_merchant_flutter_module/.ios/Flutter/engine`)
+  - FlutterPluginRegistrant (from `../../../GitLab/zhilun_merchant_flutter_module/.ios/Flutter/FlutterPluginRegistrant`)
+  - fluttertoast (from `../../../GitLab/zhilun_merchant_flutter_module/.ios/.symlinks/plugins/fluttertoast/ios`)
+  - path_provider (from `../../../GitLab/zhilun_merchant_flutter_module/.ios/.symlinks/plugins/path_provider/ios`)
+  - shared_preferences (from `../../../GitLab/zhilun_merchant_flutter_module/.ios/.symlinks/plugins/shared_preferences/ios`)
+  - sqflite (from `../../../GitLab/zhilun_merchant_flutter_module/.ios/.symlinks/plugins/sqflite/ios`)
+  - zhilun_merchant_flutter_module (from `../../../GitLab/zhilun_merchant_flutter_module/.ios/Flutter`)
+
+SPEC REPOS:
+  trunk:
+    - FMDB
+    - Toast
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: "../../../GitLab/zhilun_merchant_flutter_module/.ios/Flutter/engine"
+  FlutterPluginRegistrant:
+    :path: "../../../GitLab/zhilun_merchant_flutter_module/.ios/Flutter/FlutterPluginRegistrant"
+  fluttertoast:
+    :path: "../../../GitLab/zhilun_merchant_flutter_module/.ios/.symlinks/plugins/fluttertoast/ios"
+  path_provider:
+    :path: "../../../GitLab/zhilun_merchant_flutter_module/.ios/.symlinks/plugins/path_provider/ios"
+  shared_preferences:
+    :path: "../../../GitLab/zhilun_merchant_flutter_module/.ios/.symlinks/plugins/shared_preferences/ios"
+  sqflite:
+    :path: "../../../GitLab/zhilun_merchant_flutter_module/.ios/.symlinks/plugins/sqflite/ios"
+  zhilun_merchant_flutter_module:
+    :path: "../../../GitLab/zhilun_merchant_flutter_module/.ios/Flutter"
+
+SPEC CHECKSUMS:
+  Flutter: ac41d61a47ae5bf8195a5598d2d63754888ec0d5
+  FlutterPluginRegistrant: 9720eb521abd684736f29e8af512f5ba4be5fce3
+  fluttertoast: 6122fa75143e992b1d3470f61000f591a798cc58
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  path_provider: abfe2b5c733d04e238b0d8691db0cfd63a27a93c
+  shared_preferences: af6bfa751691cdc24be3045c43ec037377ada40d
+  sqflite: 6d358c025f5b867b29ed92fc697fd34924e11904
+  Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
+  zhilun_merchant_flutter_module: 9a93cabfcd1f66d2f74177aee43a0787c0d4f07e
+
+PODFILE CHECKSUM: f80b318ef2bb28c8b8b5843cb94d4b7ce64ac2f3
+
+COCOAPODS: 1.10.0
