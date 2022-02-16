@@ -30,7 +30,6 @@
 - (void)startServer:(NSString *)port {
     
     NSError *error;
-    
     BOOL result = [self.serverSocket acceptOnPort:port.intValue error:&error];
     if (result) {
         NSLog(@"Socket 启动成功");
@@ -58,6 +57,7 @@
 
 - (void)socket:(GCDAsyncSocket *)sock didWriteDataWithTag:(long)tag {
     
+    [sock readDataWithTimeout:-1 tag:0];
 }
 
 

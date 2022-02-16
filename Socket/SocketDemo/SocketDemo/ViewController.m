@@ -34,7 +34,6 @@
 
 - (IBAction)start:(id)sender {
     
-
     [[ServerSocket shared] startServer:self.portTextField.text];
     
 }
