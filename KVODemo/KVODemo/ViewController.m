@@ -22,13 +22,17 @@
     
         NSLog(@"KVO添加之前-%@", object_getClass(self.p));
 
+    Person *p2 = [[Person alloc] init];
+    p2.age = 10;
     
 //    NSLog(@"KVO添加之前-%@", object_getClass(self.p));
+    /// 添加观察
     [self.p addObserver:self forKeyPath:@"age" options:NSKeyValueObservingOptionOld|NSKeyValueObservingOptionNew context:nil];
 //    NSLog(@"KVO添加之后-%@", object_getClass(self.p));
 
 }
 
+/// 观察的变量改变接收到通知
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
     if (context == nil) {

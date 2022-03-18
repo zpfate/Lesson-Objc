@@ -14,10 +14,13 @@ int main(int argc, const char * argv[]) {
         // insert code here...
         
         
-        Person *p = [[Person alloc] init];
-        [p call];
-        [Person call];
-        [Person isKindOfClass:[Person class]];
+        __block Person *p = [[Person alloc] init];
+        p.age = 20;
+        p.block = ^{
+            NSLog(@"age is %zd", p.age);
+            p = nil;
+        };
+        p.block();
         
         
         void(^globalBlock)(void) = ^() {

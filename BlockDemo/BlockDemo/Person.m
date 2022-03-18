@@ -14,11 +14,20 @@
 }
 
 - (void)call {
-    
+    __weak typeof(self) weakSelf = self;
+    self.block = ^{
+        NSLog(@"age is %zd", weakSelf->_age);
+
+    };
 }
 
 + (void)call {
-    
+ 
+}
+
+- (void)dealloc
+{
+    NSLog(@"Person dealloc");
 }
 
 @end
