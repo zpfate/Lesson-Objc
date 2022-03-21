@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B6AA76927E84A0900A84137 /* PersonUnion.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6AA76827E84A0900A84137 /* PersonUnion.m */; };
 		5BAA371227E2D1AA003A775E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA371127E2D1AA003A775E /* main.m */; };
 		5BAA371A27E31D7E003A775E /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA371927E31D7E003A775E /* Person.m */; };
 /* End PBXBuildFile section */
@@ -24,6 +25,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5B6AA76727E84A0900A84137 /* PersonUnion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonUnion.h; sourceTree = "<group>"; };
+		5B6AA76827E84A0900A84137 /* PersonUnion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonUnion.m; sourceTree = "<group>"; };
 		5BAA370E27E2D1AA003A775E /* RuntimeDemo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RuntimeDemo; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BAA371127E2D1AA003A775E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5BAA371827E31D7E003A775E /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
@@ -63,6 +66,8 @@
 				5BAA371127E2D1AA003A775E /* main.m */,
 				5BAA371827E31D7E003A775E /* Person.h */,
 				5BAA371927E31D7E003A775E /* Person.m */,
+				5B6AA76727E84A0900A84137 /* PersonUnion.h */,
+				5B6AA76827E84A0900A84137 /* PersonUnion.m */,
 			);
 			path = RuntimeDemo;
 			sourceTree = "<group>";
@@ -124,6 +129,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B6AA76927E84A0900A84137 /* PersonUnion.m in Sources */,
 				5BAA371A27E31D7E003A775E /* Person.m in Sources */,
 				5BAA371227E2D1AA003A775E /* main.m in Sources */,
 			);

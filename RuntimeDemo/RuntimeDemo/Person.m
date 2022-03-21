@@ -8,7 +8,6 @@
 #import "Person.h"
 
 @interface Person ()
-
 {
     struct {
         /// 位域只占一个字节
@@ -55,7 +54,7 @@
 
 - (BOOL)isTall {
 //    return !!(_constant & kTallMask);
-    return _constant.tall;
+    return !!_constant.tall;
 }
 
 - (void)setTall:(BOOL)tall {
@@ -71,7 +70,7 @@
 
 - (BOOL)isHandsome {
 //    return !!(_constant & kHandsomeMask);
-    return _constant.handsome;
+    return !!_constant.handsome;
 }
 
 - (void)setHandsome:(BOOL)handsome {
