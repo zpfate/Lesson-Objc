@@ -7,29 +7,11 @@
 
 #import <Foundation/Foundation.h>
 
-typedef enum : NSUInteger {
-    ZPOptionsNone = 0,
-    ZPOptionsNew = 1 << 0,
-    ZPOptionsOld = 1 << 1,
-    ZPOptionsAll = 1 << 2,
-} ZPOptions;
 
 
 #import "Person.h"
 
 
-- (void)setOptions:(ZPOptions)options {
-    if (options & ZPOptionsNew) {
-        
-    }
-    if (options & ZPOptionsOld) {
-        
-    }
-    if (options & ZPOptionsAll) {
-        
-    }
- 
-}
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {

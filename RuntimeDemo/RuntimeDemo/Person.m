@@ -36,6 +36,9 @@
 }
 
 
+
+
+
 - (BOOL)isRich {
     return _constant.rich;
 //    return !!(_constant & kRichMask);
