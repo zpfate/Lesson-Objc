@@ -13,8 +13,8 @@ int main(int argc, const char * argv[]) {
         NSLog(@"Hello, World!");
         
         Person *p = [[Person alloc] init];
-//        [Person test];
-        [p test];
+        [Person test];
+//        [p test];
         
     }
     return 0;
