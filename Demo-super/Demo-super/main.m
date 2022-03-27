@@ -14,12 +14,13 @@ int main(int argc, const char * argv[]) {
         
         Student *student = [[Student alloc] init];
         
-        
-        
-        NSLog(@"%d", [[NSObject class] isKindOfClass:[NSObject class]]);
-        NSLog(@"%d", [[NSObject class] isMemberOfClass:[NSObject class]]);
-        NSLog(@"%d", [[Person class] isKindOfClass:[Person class]]);
-        NSLog(@"%d", [[Person class] isMemberOfClass:[Person class]]);
+        /*
+         类方法的实现和实例方法不一样
+         */
+        NSLog(@"%d", [[NSObject class] isKindOfClass:[NSObject class]]); // 1
+        NSLog(@"%d", [[NSObject class] isMemberOfClass:[NSObject class]]); // 0
+        NSLog(@"%d", [[Person class] isKindOfClass:[Person class]]); // 0
+        NSLog(@"%d", [[Person class] isMemberOfClass:[Person class]]); // 0
     }
     return 0;
 }
