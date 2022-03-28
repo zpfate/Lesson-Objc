@@ -21,11 +21,11 @@
                 receiver: 方法接收者
                 superClass: 从父类寻找方法的实现
          */
-        NSLog(@"%@", [self class]); // Student
-        NSLog(@"%@", [self superclass]); // Person
-        NSLog(@"---------------------");
-        NSLog(@"%@", [super class]); // Student
-        NSLog(@"%@", [super superclass]); // Person
+//        NSLog(@"%@", [self class]); // Student
+//        NSLog(@"%@", [self superclass]); // Person
+//        NSLog(@"---------------------");
+//        NSLog(@"%@", [super class]); // Student
+//        NSLog(@"%@", [super superclass]); // Person
 
         
     }
