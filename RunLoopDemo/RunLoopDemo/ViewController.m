@@ -15,6 +15,28 @@
 
 void observerAction(CFRunLoopObserverRef observer, CFRunLoopActivity activity, void *info) {
     
+    switch (activity) {
+        case kCFRunLoopEntry:
+            NSLog(@"kCFRunLoopEntry");
+            break;
+        case kCFRunLoopBeforeTimers:
+            NSLog(@"kCFRunLoopBeforeTimers");
+            break;
+        case kCFRunLoopBeforeSources:
+            NSLog(@"kCFRunLoopBeforeSources");
+            break;
+        case kCFRunLoopBeforeWaiting:
+            NSLog(@"kCFRunLoopBeforeWaiting");
+            break;
+        case kCFRunLoopAfterWaiting:
+            NSLog(@"kCFRunLoopAfterWaiting");
+            break;
+        case kCFRunLoopExit:
+            NSLog(@"kCFRunLoopExit");
+            break;
+        default:
+            break;
+    }
     
 }
 - (void)viewDidLoad {

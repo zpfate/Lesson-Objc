@@ -1,8 +1,8 @@
 //
 //  AppDelegate.m
-//  RunLoopDemo
+//  RunLoopAppDemo
 //
-//  Created by Twisted Fate on 2022/3/29.
+//  Created by Twisted Fate on 2022/3/30.
 //
 
 #import "AppDelegate.h"
@@ -16,7 +16,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-
     return YES;
 }
 
