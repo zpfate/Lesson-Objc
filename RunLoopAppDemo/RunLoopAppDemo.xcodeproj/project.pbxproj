@@ -15,6 +15,7 @@
 		5BFE86C127F44ED200C6BA26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BFE86BF27F44ED200C6BA26 /* LaunchScreen.storyboard */; };
 		5BFE86C427F44ED200C6BA26 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BFE86C327F44ED200C6BA26 /* main.m */; };
 		5BFE86CC27F4530600C6BA26 /* TFThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BFE86CB27F4530600C6BA26 /* TFThread.m */; };
+		5BFE86CF27F54E7800C6BA26 /* TFPermenantThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BFE86CE27F54E7800C6BA26 /* TFPermenantThread.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		5BFE86C327F44ED200C6BA26 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5BFE86CA27F4530600C6BA26 /* TFThread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFThread.h; sourceTree = "<group>"; };
 		5BFE86CB27F4530600C6BA26 /* TFThread.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFThread.m; sourceTree = "<group>"; };
+		5BFE86CD27F54E7800C6BA26 /* TFPermenantThread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFPermenantThread.h; sourceTree = "<group>"; };
+		5BFE86CE27F54E7800C6BA26 /* TFPermenantThread.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFPermenantThread.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +75,8 @@
 				5BFE86B827F44ED000C6BA26 /* ViewController.m */,
 				5BFE86CA27F4530600C6BA26 /* TFThread.h */,
 				5BFE86CB27F4530600C6BA26 /* TFThread.m */,
+				5BFE86CD27F54E7800C6BA26 /* TFPermenantThread.h */,
+				5BFE86CE27F54E7800C6BA26 /* TFPermenantThread.m */,
 				5BFE86BA27F44ED000C6BA26 /* Main.storyboard */,
 				5BFE86BD27F44ED200C6BA26 /* Assets.xcassets */,
 				5BFE86BF27F44ED200C6BA26 /* LaunchScreen.storyboard */,
@@ -153,6 +158,7 @@
 			files = (
 				5BFE86B927F44ED000C6BA26 /* ViewController.m in Sources */,
 				5BFE86CC27F4530600C6BA26 /* TFThread.m in Sources */,
+				5BFE86CF27F54E7800C6BA26 /* TFPermenantThread.m in Sources */,
 				5BFE86B327F44ED000C6BA26 /* AppDelegate.m in Sources */,
 				5BFE86C427F44ED200C6BA26 /* main.m in Sources */,
 				5BFE86B627F44ED000C6BA26 /* SceneDelegate.m in Sources */,

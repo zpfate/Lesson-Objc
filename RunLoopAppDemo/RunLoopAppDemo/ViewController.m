@@ -7,10 +7,11 @@
 
 #import "ViewController.h"
 #import "TFThread.h"
+#import "TFPermenantThread.h"
 @interface ViewController ()
 
 @property (nonatomic, strong) TFThread *thread;
-@property (nonatomic, assign) BOOL stop;
+@property (nonatomic, assign, getter=isStopped) BOOL stop;
 
 @end
 
@@ -20,19 +21,21 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    
+    
    
 //    self.thread = [[TFThread alloc] initWithTarget:self selector:@selector(run) object:nil];
     self.stop = NO;
     __weak typeof(self) weakSelf = self;
     self.thread = [[TFThread alloc] initWithBlock:^{
-        NSLog(@"%s %@", __func__, [TFThread currentThread]);
+        NSLog(@"begin---%s %@", __func__, [TFThread currentThread]);
         
         // 往RunLoop里面添加Source\Timer\Observer
         [[NSRunLoop currentRunLoop] addPort:[[NSPort alloc] init] forMode:NSDefaultRunLoopMode];
         
-        
         // NSRunLoop的run方法是无法停止的,它专门用于开启一个用不销毁的线程
-        while (!weakSelf.stop) {
+        while (weakSelf && !weakSelf.stop) {
+            NSLog(@"---%@", weakSelf);
             [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];
         }
 //        [[NSRunLoop currentRunLoop] run];
@@ -47,11 +50,14 @@
 - (void)dealloc {
     // 停止RunLoop
     // waitUntilDone:等不等子线程完成再继续执行
-    [self performSelector:@selector(stopThread) onThread:self.thread withObject:nil waitUntilDone:NO];
+    [self stopAction];
+    self.thread = nil;
+    NSLog(@"%s", __func__);
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    
+
+    // 在子线程执行test任务
     [self performSelector:@selector(test) onThread:self.thread withObject:nil waitUntilDone:NO];
 }
 
@@ -60,6 +66,10 @@
     NSLog(@"%s %@", __func__, [TFThread currentThread]);
 }
 
+- (IBAction)stopAction {
+    if (!self.thread) return;
+    [self performSelector:@selector(stopThread) onThread:self.thread withObject:nil waitUntilDone:YES];
+}
 
 // 停止子线程的RunLoop
 - (void)stopThread {
@@ -67,6 +77,9 @@
     self.stop = YES;
     // 停止RunLoop
     CFRunLoopStop(CFRunLoopGetCurrent());
+    
+    NSLog(@"%s %@", __func__, [TFThread currentThread]);
+    self.thread = nil;
 }
 
 
