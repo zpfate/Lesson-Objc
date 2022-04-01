@@ -14,6 +14,9 @@
 		5BFE86E927F589AF00C6BA26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BFE86E827F589AF00C6BA26 /* Assets.xcassets */; };
 		5BFE86EC27F589AF00C6BA26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BFE86EA27F589AF00C6BA26 /* LaunchScreen.storyboard */; };
 		5BFE86EF27F589AF00C6BA26 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BFE86EE27F589AF00C6BA26 /* main.m */; };
+		5BFE86F727F6DEC200C6BA26 /* BaseDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BFE86F627F6DEC200C6BA26 /* BaseDemo.m */; };
+		5BFE86FB27F6E33400C6BA26 /* OSSpinLockDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BFE86FA27F6E33400C6BA26 /* OSSpinLockDemo.m */; };
+		5BFE86FE27F6EABB00C6BA26 /* OSUnfairLockDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BFE86FD27F6EABB00C6BA26 /* OSUnfairLockDemo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,12 @@
 		5BFE86EB27F589AF00C6BA26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5BFE86ED27F589AF00C6BA26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BFE86EE27F589AF00C6BA26 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5BFE86F527F6DEC200C6BA26 /* BaseDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseDemo.h; sourceTree = "<group>"; };
+		5BFE86F627F6DEC200C6BA26 /* BaseDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseDemo.m; sourceTree = "<group>"; };
+		5BFE86F927F6E33400C6BA26 /* OSSpinLockDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OSSpinLockDemo.h; sourceTree = "<group>"; };
+		5BFE86FA27F6E33400C6BA26 /* OSSpinLockDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OSSpinLockDemo.m; sourceTree = "<group>"; };
+		5BFE86FC27F6EABB00C6BA26 /* OSUnfairLockDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OSUnfairLockDemo.h; sourceTree = "<group>"; };
+		5BFE86FD27F6EABB00C6BA26 /* OSUnfairLockDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OSUnfairLockDemo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +70,7 @@
 		5BFE86DB27F589AC00C6BA26 /* Multi-ThreadDemo */ = {
 			isa = PBXGroup;
 			children = (
+				5BFE86F827F6E31700C6BA26 /* Locks */,
 				5BFE86DC27F589AC00C6BA26 /* AppDelegate.h */,
 				5BFE86DD27F589AC00C6BA26 /* AppDelegate.m */,
 				5BFE86DF27F589AC00C6BA26 /* SceneDelegate.h */,
@@ -74,6 +84,19 @@
 				5BFE86EE27F589AF00C6BA26 /* main.m */,
 			);
 			path = "Multi-ThreadDemo";
+			sourceTree = "<group>";
+		};
+		5BFE86F827F6E31700C6BA26 /* Locks */ = {
+			isa = PBXGroup;
+			children = (
+				5BFE86F527F6DEC200C6BA26 /* BaseDemo.h */,
+				5BFE86F627F6DEC200C6BA26 /* BaseDemo.m */,
+				5BFE86F927F6E33400C6BA26 /* OSSpinLockDemo.h */,
+				5BFE86FA27F6E33400C6BA26 /* OSSpinLockDemo.m */,
+				5BFE86FC27F6EABB00C6BA26 /* OSUnfairLockDemo.h */,
+				5BFE86FD27F6EABB00C6BA26 /* OSUnfairLockDemo.m */,
+			);
+			path = Locks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,8 +169,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BFE86FE27F6EABB00C6BA26 /* OSUnfairLockDemo.m in Sources */,
 				5BFE86E427F589AC00C6BA26 /* ViewController.m in Sources */,
 				5BFE86DE27F589AC00C6BA26 /* AppDelegate.m in Sources */,
+				5BFE86F727F6DEC200C6BA26 /* BaseDemo.m in Sources */,
+				5BFE86FB27F6E33400C6BA26 /* OSSpinLockDemo.m in Sources */,
 				5BFE86EF27F589AF00C6BA26 /* main.m in Sources */,
 				5BFE86E127F589AC00C6BA26 /* SceneDelegate.m in Sources */,
 			);
