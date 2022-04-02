@@ -8,6 +8,14 @@
 #import "OSUnfairLockDemo.h"
 #import <os/lock.h>
 
+@interface OSUnfairLockDemo ()
+
+@property (nonatomic, assign) os_unfair_lock moneyLock;
+
+@property (nonatomic, assign) os_unfair_lock ticketLock;
+
+@end
+
 @implementation OSUnfairLockDemo
 
 - (void)test {
@@ -19,23 +27,38 @@
     // 加锁
     os_unfair_lock_lock(&lock);
     // 解锁
-    os_unfair_lock_lock(&lock);
+    os_unfair_lock_unlock(&lock);
     
+}
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.moneyLock = OS_UNFAIR_LOCK_INIT;
+        self.ticketLock = OS_UNFAIR_LOCK_INIT;
+    }
+    return self;
 }
 
 
 - (void)_saleTicket {
+    os_unfair_lock_lock(&_ticketLock);
     [super _saleTicket];
+    os_unfair_lock_unlock(&_ticketLock);
 }
 
 - (void)_saveMoney {
-    
+    os_unfair_lock_lock(&_moneyLock);
     [super _saveMoney];
-    
+    os_unfair_lock_unlock(&_moneyLock);
+
 }
 
 - (void)_drawMoney {
-    
+    os_unfair_lock_lock(&_moneyLock);
     [super _drawMoney];
+    os_unfair_lock_unlock(&_moneyLock);
+
 }
 @end

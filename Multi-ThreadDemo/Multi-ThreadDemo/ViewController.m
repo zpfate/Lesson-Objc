@@ -8,6 +8,9 @@
 #import "ViewController.h"
 #import "BaseDemo.h"
 #import "Locks/OSSpinLockDemo.h"
+#import "Locks/OSUnfairLockDemo.h"
+#import "Locks/PthreadMutexDemo.h"
+
 @interface ViewController ()
 
 @end
@@ -21,18 +24,32 @@
     
 //    [self gcdGroup];
 
-    OSSpinLockDemo *demo = [[OSSpinLockDemo alloc] init];
+    PthreadMutexDemo *demo = [[PthreadMutexDemo alloc] init];
 //    [demo ticketTest];
-    [demo moneyTest];
+//    NSLog(@"----------------");
+//    [demo moneyTest];
     
-    
+    [self testPerformSelector];
 }
 
 
 
 
+- (void)testPerformSelector {
+    
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+       
+        NSLog(@"任务1---");
+        [self performSelector:@selector(testTask) withObject:nil afterDelay:0];
+        NSLog(@"任务3---");
 
+    });
+}
 
+- (void)testTask {
+    NSLog(@"任务2---");
+
+}
 
 
 // GCD任务组

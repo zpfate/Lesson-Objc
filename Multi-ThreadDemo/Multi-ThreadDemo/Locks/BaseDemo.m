@@ -24,9 +24,7 @@
     dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
     dispatch_async(queue, ^{
         for (int i = 0; i < 5; i++) {
-            sleep(0.2);
-            self.ticketsCount--;
-            NSLog(@"还剩---%d张票", self.ticketsCount);
+            [self _saleTicket];
         }
     });
     dispatch_async(queue, ^{

@@ -17,6 +17,8 @@
 		5BFE86F727F6DEC200C6BA26 /* BaseDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BFE86F627F6DEC200C6BA26 /* BaseDemo.m */; };
 		5BFE86FB27F6E33400C6BA26 /* OSSpinLockDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BFE86FA27F6E33400C6BA26 /* OSSpinLockDemo.m */; };
 		5BFE86FE27F6EABB00C6BA26 /* OSUnfairLockDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BFE86FD27F6EABB00C6BA26 /* OSUnfairLockDemo.m */; };
+		5BFE870127F7E47500C6BA26 /* PthreadMutexDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BFE870027F7E47500C6BA26 /* PthreadMutexDemo.m */; };
+		5BFE870427F8405D00C6BA26 /* MutexConditionDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BFE870327F8405D00C6BA26 /* MutexConditionDemo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,10 @@
 		5BFE86FA27F6E33400C6BA26 /* OSSpinLockDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OSSpinLockDemo.m; sourceTree = "<group>"; };
 		5BFE86FC27F6EABB00C6BA26 /* OSUnfairLockDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OSUnfairLockDemo.h; sourceTree = "<group>"; };
 		5BFE86FD27F6EABB00C6BA26 /* OSUnfairLockDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OSUnfairLockDemo.m; sourceTree = "<group>"; };
+		5BFE86FF27F7E47500C6BA26 /* PthreadMutexDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PthreadMutexDemo.h; sourceTree = "<group>"; };
+		5BFE870027F7E47500C6BA26 /* PthreadMutexDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PthreadMutexDemo.m; sourceTree = "<group>"; };
+		5BFE870227F8405D00C6BA26 /* MutexConditionDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MutexConditionDemo.h; sourceTree = "<group>"; };
+		5BFE870327F8405D00C6BA26 /* MutexConditionDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MutexConditionDemo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +101,10 @@
 				5BFE86FA27F6E33400C6BA26 /* OSSpinLockDemo.m */,
 				5BFE86FC27F6EABB00C6BA26 /* OSUnfairLockDemo.h */,
 				5BFE86FD27F6EABB00C6BA26 /* OSUnfairLockDemo.m */,
+				5BFE86FF27F7E47500C6BA26 /* PthreadMutexDemo.h */,
+				5BFE870027F7E47500C6BA26 /* PthreadMutexDemo.m */,
+				5BFE870227F8405D00C6BA26 /* MutexConditionDemo.h */,
+				5BFE870327F8405D00C6BA26 /* MutexConditionDemo.m */,
 			);
 			path = Locks;
 			sourceTree = "<group>";
@@ -174,8 +184,10 @@
 				5BFE86DE27F589AC00C6BA26 /* AppDelegate.m in Sources */,
 				5BFE86F727F6DEC200C6BA26 /* BaseDemo.m in Sources */,
 				5BFE86FB27F6E33400C6BA26 /* OSSpinLockDemo.m in Sources */,
+				5BFE870127F7E47500C6BA26 /* PthreadMutexDemo.m in Sources */,
 				5BFE86EF27F589AF00C6BA26 /* main.m in Sources */,
 				5BFE86E127F589AC00C6BA26 /* SceneDelegate.m in Sources */,
+				5BFE870427F8405D00C6BA26 /* MutexConditionDemo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
