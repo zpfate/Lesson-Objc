@@ -10,7 +10,11 @@
 #import "Locks/OSSpinLockDemo.h"
 #import "Locks/OSUnfairLockDemo.h"
 #import "Locks/PthreadMutexDemo.h"
-
+#import "Locks/MutexConditionDemo.h"
+#import "Locks/NSLockDemo.h"
+#import "Locks/NSConditionDemo.h"
+#import "Locks/NSConditionLockDemo.h"
+#import "Locks/SemaphoreDemo.h"
 @interface ViewController ()
 
 @end
@@ -24,12 +28,12 @@
     
 //    [self gcdGroup];
 
-    PthreadMutexDemo *demo = [[PthreadMutexDemo alloc] init];
+    SemaphoreDemo *demo = [[SemaphoreDemo alloc] init];
 //    [demo ticketTest];
 //    NSLog(@"----------------");
 //    [demo moneyTest];
     
-    [self testPerformSelector];
+    [demo otherTest];
 }
 
 
@@ -37,12 +41,11 @@
 
 - (void)testPerformSelector {
     
+    // Runloop没有启动
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
-       
         NSLog(@"任务1---");
         [self performSelector:@selector(testTask) withObject:nil afterDelay:0];
         NSLog(@"任务3---");
-
     });
 }
 

@@ -11,6 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MutexConditionDemo : BaseDemo
 
+- (void)conditionTest;
+
 @end
 
 NS_ASSUME_NONNULL_END

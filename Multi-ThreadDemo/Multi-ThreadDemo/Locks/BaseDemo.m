@@ -81,6 +81,8 @@
     NSLog(@"取了20,余额%d - %@", self.money, [NSThread currentThread]);
 }
 
-
+- (void)otherTest {
+    
+}
 
 @end
