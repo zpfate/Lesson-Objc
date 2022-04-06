@@ -16,6 +16,21 @@
 
 @implementation NSConditionDemo
 
+- (void)test {
+    // 初始化
+    NSCondition *condition = [[NSCondition alloc] init];
+    // 加锁
+    [condition lock];
+    // 等待
+    [condition wait];
+    // 通知
+    [condition signal];
+    // 广播
+    [condition broadcast];
+    // 解锁
+    [condition unlock];
+    
+}
 
 - (instancetype)init
 {
