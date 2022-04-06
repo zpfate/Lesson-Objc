@@ -12,6 +12,7 @@
 		5B7F5A5B27FD6EED003A928F /* NSConditionLockDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B7F5A5A27FD6EED003A928F /* NSConditionLockDemo.m */; };
 		5B7F5A5E27FD72B8003A928F /* SerialQueueDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B7F5A5D27FD72B8003A928F /* SerialQueueDemo.m */; };
 		5B7F5A6427FD74A1003A928F /* SemaphoreDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B7F5A6327FD74A1003A928F /* SemaphoreDemo.m */; };
+		5B7F5A6727FD7BBB003A928F /* SynchronizeDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B7F5A6627FD7BBB003A928F /* SynchronizeDemo.m */; };
 		5BFE86DE27F589AC00C6BA26 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BFE86DD27F589AC00C6BA26 /* AppDelegate.m */; };
 		5BFE86E127F589AC00C6BA26 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BFE86E027F589AC00C6BA26 /* SceneDelegate.m */; };
 		5BFE86E427F589AC00C6BA26 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BFE86E327F589AC00C6BA26 /* ViewController.m */; };
@@ -37,6 +38,8 @@
 		5B7F5A5D27FD72B8003A928F /* SerialQueueDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SerialQueueDemo.m; sourceTree = "<group>"; };
 		5B7F5A6227FD74A1003A928F /* SemaphoreDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SemaphoreDemo.h; sourceTree = "<group>"; };
 		5B7F5A6327FD74A1003A928F /* SemaphoreDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SemaphoreDemo.m; sourceTree = "<group>"; };
+		5B7F5A6527FD7BBB003A928F /* SynchronizeDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SynchronizeDemo.h; sourceTree = "<group>"; };
+		5B7F5A6627FD7BBB003A928F /* SynchronizeDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SynchronizeDemo.m; sourceTree = "<group>"; };
 		5BFE86D927F589AC00C6BA26 /* Multi-ThreadDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Multi-ThreadDemo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BFE86DC27F589AC00C6BA26 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5BFE86DD27F589AC00C6BA26 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -130,6 +133,8 @@
 				5B7F5A5D27FD72B8003A928F /* SerialQueueDemo.m */,
 				5B7F5A6227FD74A1003A928F /* SemaphoreDemo.h */,
 				5B7F5A6327FD74A1003A928F /* SemaphoreDemo.m */,
+				5B7F5A6527FD7BBB003A928F /* SynchronizeDemo.h */,
+				5B7F5A6627FD7BBB003A928F /* SynchronizeDemo.m */,
 			);
 			path = Locks;
 			sourceTree = "<group>";
@@ -208,6 +213,7 @@
 				5B7F5A5827FD6608003A928F /* NSConditionDemo.m in Sources */,
 				5BFE86E427F589AC00C6BA26 /* ViewController.m in Sources */,
 				5B7F5A5E27FD72B8003A928F /* SerialQueueDemo.m in Sources */,
+				5B7F5A6727FD7BBB003A928F /* SynchronizeDemo.m in Sources */,
 				5BFE86DE27F589AC00C6BA26 /* AppDelegate.m in Sources */,
 				5BFE86F727F6DEC200C6BA26 /* BaseDemo.m in Sources */,
 				5B7F5A5527FD63E6003A928F /* NSLockDemo.m in Sources */,

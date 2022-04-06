@@ -29,11 +29,11 @@
 //    [self gcdGroup];
 
     SemaphoreDemo *demo = [[SemaphoreDemo alloc] init];
-//    [demo ticketTest];
+    [demo ticketTest];
 //    NSLog(@"----------------");
-//    [demo moneyTest];
+    [demo moneyTest];
     
-    [demo otherTest];
+//    [demo otherTest];
 }
 
 
