@@ -14,6 +14,7 @@
 		5B7F5AE72803C710003A928F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B7F5AE62803C710003A928F /* Assets.xcassets */; };
 		5B7F5AEA2803C710003A928F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B7F5AE82803C710003A928F /* LaunchScreen.storyboard */; };
 		5B7F5AED2803C710003A928F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B7F5AEC2803C710003A928F /* main.m */; };
+		5B7F5AF52804251C003A928F /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B7F5AF42804251C003A928F /* Person.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		5B7F5AE92803C710003A928F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B7F5AEB2803C710003A928F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B7F5AEC2803C710003A928F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5B7F5AF32804251C003A928F /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		5B7F5AF42804251C003A928F /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,8 @@
 				5B7F5ADE2803C70D003A928F /* SceneDelegate.m */,
 				5B7F5AE02803C70D003A928F /* ViewController.h */,
 				5B7F5AE12803C70D003A928F /* ViewController.m */,
+				5B7F5AF32804251C003A928F /* Person.h */,
+				5B7F5AF42804251C003A928F /* Person.m */,
 				5B7F5AE32803C70D003A928F /* Main.storyboard */,
 				5B7F5AE62803C710003A928F /* Assets.xcassets */,
 				5B7F5AE82803C710003A928F /* LaunchScreen.storyboard */,
@@ -148,6 +153,7 @@
 			files = (
 				5B7F5AE22803C70D003A928F /* ViewController.m in Sources */,
 				5B7F5ADC2803C70D003A928F /* AppDelegate.m in Sources */,
+				5B7F5AF52804251C003A928F /* Person.m in Sources */,
 				5B7F5AED2803C710003A928F /* main.m in Sources */,
 				5B7F5ADF2803C70D003A928F /* SceneDelegate.m in Sources */,
 			);

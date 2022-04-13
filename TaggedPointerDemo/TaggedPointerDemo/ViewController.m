@@ -6,7 +6,7 @@
 //
 
 #import "ViewController.h"
-
+#import "Person.h"
 @interface ViewController ()
 @property (nonatomic, copy) NSString *name;
 @end
@@ -17,11 +17,20 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    
-    
-//    [self test1];
 
+    __strong Person *p1;
+
+    __weak Person *p2;
+    __unsafe_unretained Person *p3;
     
+    NSLog(@"123");
+    {
+        Person *p = [[Person alloc] init];
+        p3 = p;
+    }
+    
+    NSLog(@"123 - %@", p3);
+
 }
 
 - (void)test1 {
