@@ -43,8 +43,8 @@
 //    };
 //};
 {
-    /// 共用体的意思是大家共用一个字
-    union{
+    /// 共用体的意思是大家共用一块内存
+    union {
         char bits;
         struct {
             char tall: 1;

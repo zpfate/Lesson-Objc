@@ -9,13 +9,12 @@
 
 @interface Person ()
 {
+    /// 位域只占一个字节
     struct {
-        /// 位域只占一个字节
         char tall: 1;
         char rich: 1;
         char handsome: 1;
     } _constant; // 0b0000 0001
-    
 //    char _constant;
 }
 

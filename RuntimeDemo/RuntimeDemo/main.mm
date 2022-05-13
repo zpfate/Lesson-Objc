@@ -6,17 +6,27 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <objc/runtime.h>
 #import "TF_Runtime.h"
 
 #import "Person.h"
 
+
+struct test {
+    char tall: 1;
+    char handsome:1;
+    char rich:1;
+};
 
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // insert code here...
         NSLog(@"Hello, World!");
+        
+        
+        NSLog(@"---------%lu", class_getInstanceSize(Person.class));
+        
         
         Person *p = [[Person alloc] init];
 //        p.rich = YES;
