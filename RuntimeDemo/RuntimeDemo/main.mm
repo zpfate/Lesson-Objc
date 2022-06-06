@@ -29,9 +29,9 @@ int main(int argc, const char * argv[]) {
         
         
         Person *p = [[Person alloc] init];
-//        p.rich = YES;
-//        p.tall = YES;
-//        p.handsome = YES;
+        p.rich = YES;
+        p.tall = YES;
+        p.handsome = YES;
         
         NSLog(@"rich:%d, tall:%d, handsome:%d", p.isRich, p.isTall, p.isHandsome);
     }
