@@ -6,7 +6,6 @@
 //
 
 #import "SimpleViewController.h"
-#import <ReactiveCocoa/ReactiveCocoa.h>
 
 @interface SimpleViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -25,8 +24,8 @@
     // Do any additional setup after loading the view.
     
     
-    self.data = @[@"RACSignal", @"RACSubject", @"RACReplaySubject"];
-    self.selectors = @[@"rac_signal", @"rac_subject", @"rac_replaySubject"];
+    self.data = @[@"RACSignal", @"RACSubject", @"RACReplaySubject", @"RACTuple"];
+    self.selectors = @[@"rac_signal", @"rac_subject", @"rac_replaySubject", @""];
 
     [self.view addSubview:self.tableView];
     
@@ -74,16 +73,14 @@
         // 2.调用sendNext发送信号，遍历刚刚保存的所有订阅者，一个一个调用订阅者的nextBlock。
     /// 创建信号
     RACSubject *subject = [RACSubject subject];
+    
     [subject subscribeNext:^(id x) {
         NSLog(@"第一个订阅者%@",x);
-
     }];
     
     [subject subscribeNext:^(id x) {
         NSLog(@"第二个订阅者%@",x);
-
     }];
-
     /// 发送信号
     [subject sendNext:@"1"];
 }
@@ -115,6 +112,10 @@
 
           NSLog(@"第二个订阅者接收到的数据%@",x);
       }];
+}
+
+- (void)rac_tuple {
+    
 }
 
 

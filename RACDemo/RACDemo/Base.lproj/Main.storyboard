@@ -112,8 +112,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Go Next"/>
                                 <connections>
-                                    <action selector="goNext:" destination="9pv-XK-wg4" eventType="touchUpInside" id="7j3-EN-ELS"/>
-                                    <segue destination="e3C-zA-kdg" kind="show" id="JiA-12-GTG"/>
+                                    <segue destination="e3C-zA-kdg" kind="show" identifier="" id="G3j-Xq-2e3"/>
                                 </connections>
                             </button>
                         </subviews>

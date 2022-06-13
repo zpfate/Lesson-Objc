@@ -18,8 +18,13 @@
     // Do any additional setup after loading the view.
 }
 
+- (void)dealloc {
+    NSLog(@"%s", __func__);
+}
+
 - (IBAction)sendMessage:(id)sender {
-    [self.subject sendNext:nil];
+    
+    [self.subject sendNext:@"1"];
 }
 
 /*
