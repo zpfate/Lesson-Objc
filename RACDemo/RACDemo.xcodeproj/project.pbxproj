@@ -7,27 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5ABA0D1AD9557CB4742E8A49 /* libPods-RACDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD83F2F338F89C8810905A64 /* libPods-RACDemo.a */; };
 		5B4826D328517FB200B17593 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B4826D228517FB200B17593 /* AppDelegate.m */; };
 		5B4826D628517FB200B17593 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B4826D528517FB200B17593 /* SceneDelegate.m */; };
-		5B4826D928517FB200B17593 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B4826D828517FB200B17593 /* ViewController.m */; };
 		5B4826DC28517FB200B17593 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B4826DA28517FB200B17593 /* Main.storyboard */; };
 		5B4826DE28517FB400B17593 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B4826DD28517FB400B17593 /* Assets.xcassets */; };
 		5B4826E128517FB400B17593 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B4826DF28517FB400B17593 /* LaunchScreen.storyboard */; };
 		5B4826E428517FB400B17593 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B4826E328517FB400B17593 /* main.m */; };
 		5B5B472F2856CA19003E6BBE /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5B472E2856CA19003E6BBE /* HomeViewController.m */; };
-		5BA9A11B28531D7E001387E7 /* ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA9A11A28531D7E001387E7 /* ViewModel.m */; };
+		5B5B47322856D43C003E6BBE /* SimpleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5B47312856D43C003E6BBE /* SimpleViewController.m */; };
+		5B5B47382856DE23003E6BBE /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5B47372856DE23003E6BBE /* LoginViewModel.m */; };
+		5B5B473B2857051C003E6BBE /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5B473A2857051C003E6BBE /* LoginViewController.m */; };
+		5B5B473E28570BEA003E6BBE /* DelegateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5B473D28570BEA003E6BBE /* DelegateViewController.m */; };
+		5B5B474128570E56003E6BBE /* DelegateNextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5B474028570E56003E6BBE /* DelegateNextViewController.m */; };
+		5B5B47452857126F003E6BBE /* StoryboardExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5B47442857126F003E6BBE /* StoryboardExtension.m */; };
 		5BA9A11E28532224001387E7 /* CaculatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA9A11D28532224001387E7 /* CaculatorManager.m */; };
+		FE1BDDB64B78226F13AFD200 /* libPods-RACDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B56479B8C7D5A61B1D405EC /* libPods-RACDemo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B56479B8C7D5A61B1D405EC /* libPods-RACDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RACDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		577F14C5F0A4AF5A783A46BA /* Pods-RACDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACDemo.debug.xcconfig"; path = "Target Support Files/Pods-RACDemo/Pods-RACDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		5B4826CE28517FB200B17593 /* RACDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RACDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B4826D128517FB200B17593 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5B4826D228517FB200B17593 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		5B4826D428517FB200B17593 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		5B4826D528517FB200B17593 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		5B4826D728517FB200B17593 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		5B4826D828517FB200B17593 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		5B4826DB28517FB200B17593 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5B4826DD28517FB400B17593 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B4826E028517FB400B17593 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -35,13 +39,22 @@
 		5B4826E328517FB400B17593 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5B5B472D2856CA19003E6BBE /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		5B5B472E2856CA19003E6BBE /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
-		5BA9A11928531D7E001387E7 /* ViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewModel.h; sourceTree = "<group>"; };
-		5BA9A11A28531D7E001387E7 /* ViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewModel.m; sourceTree = "<group>"; };
+		5B5B47302856D43C003E6BBE /* SimpleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleViewController.h; sourceTree = "<group>"; };
+		5B5B47312856D43C003E6BBE /* SimpleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleViewController.m; sourceTree = "<group>"; };
+		5B5B47362856DE23003E6BBE /* LoginViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewModel.h; sourceTree = "<group>"; };
+		5B5B47372856DE23003E6BBE /* LoginViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewModel.m; sourceTree = "<group>"; };
+		5B5B47392857051C003E6BBE /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		5B5B473A2857051C003E6BBE /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		5B5B473C28570BEA003E6BBE /* DelegateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DelegateViewController.h; sourceTree = "<group>"; };
+		5B5B473D28570BEA003E6BBE /* DelegateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DelegateViewController.m; sourceTree = "<group>"; };
+		5B5B473F28570E56003E6BBE /* DelegateNextViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DelegateNextViewController.h; sourceTree = "<group>"; };
+		5B5B474028570E56003E6BBE /* DelegateNextViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DelegateNextViewController.m; sourceTree = "<group>"; };
+		5B5B474228570FE1003E6BBE /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		5B5B47432857126F003E6BBE /* StoryboardExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StoryboardExtension.h; sourceTree = "<group>"; };
+		5B5B47442857126F003E6BBE /* StoryboardExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StoryboardExtension.m; sourceTree = "<group>"; };
 		5BA9A11C28532224001387E7 /* CaculatorManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CaculatorManager.h; sourceTree = "<group>"; };
 		5BA9A11D28532224001387E7 /* CaculatorManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CaculatorManager.m; sourceTree = "<group>"; };
-		8D912D2AE9891D43FDBB77F6 /* Pods-RACDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACDemo.release.xcconfig"; path = "Target Support Files/Pods-RACDemo/Pods-RACDemo.release.xcconfig"; sourceTree = "<group>"; };
-		B55598054A580EE635E1A425 /* Pods-RACDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACDemo.debug.xcconfig"; path = "Target Support Files/Pods-RACDemo/Pods-RACDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		CD83F2F338F89C8810905A64 /* libPods-RACDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RACDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C6B6F3DB67A7554AAC00047 /* Pods-RACDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACDemo.release.xcconfig"; path = "Target Support Files/Pods-RACDemo/Pods-RACDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,20 +62,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5ABA0D1AD9557CB4742E8A49 /* libPods-RACDemo.a in Frameworks */,
+				FE1BDDB64B78226F13AFD200 /* libPods-RACDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2058B76740768A20C1EFE688 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1B56479B8C7D5A61B1D405EC /* libPods-RACDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5B4826C528517FB100B17593 = {
 			isa = PBXGroup;
 			children = (
 				5B4826D028517FB200B17593 /* RACDemo */,
 				5B4826CF28517FB200B17593 /* Products */,
 				8E2CF110C713F174D2A6D4A5 /* Pods */,
-				B567B7C4167A6D01BE096739 /* Frameworks */,
+				2058B76740768A20C1EFE688 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,18 +98,27 @@
 		5B4826D028517FB200B17593 /* RACDemo */ = {
 			isa = PBXGroup;
 			children = (
+				5B5B474228570FE1003E6BBE /* PrefixHeader.pch */,
 				5B4826D128517FB200B17593 /* AppDelegate.h */,
 				5B4826D228517FB200B17593 /* AppDelegate.m */,
 				5B5B472D2856CA19003E6BBE /* HomeViewController.h */,
 				5B5B472E2856CA19003E6BBE /* HomeViewController.m */,
+				5B5B47302856D43C003E6BBE /* SimpleViewController.h */,
+				5B5B47312856D43C003E6BBE /* SimpleViewController.m */,
+				5B5B473C28570BEA003E6BBE /* DelegateViewController.h */,
+				5B5B473D28570BEA003E6BBE /* DelegateViewController.m */,
+				5B5B473F28570E56003E6BBE /* DelegateNextViewController.h */,
+				5B5B474028570E56003E6BBE /* DelegateNextViewController.m */,
+				5B5B47392857051C003E6BBE /* LoginViewController.h */,
+				5B5B473A2857051C003E6BBE /* LoginViewController.m */,
 				5BA9A11C28532224001387E7 /* CaculatorManager.h */,
 				5BA9A11D28532224001387E7 /* CaculatorManager.m */,
 				5B4826D428517FB200B17593 /* SceneDelegate.h */,
 				5B4826D528517FB200B17593 /* SceneDelegate.m */,
-				5BA9A11928531D7E001387E7 /* ViewModel.h */,
-				5BA9A11A28531D7E001387E7 /* ViewModel.m */,
-				5B4826D728517FB200B17593 /* ViewController.h */,
-				5B4826D828517FB200B17593 /* ViewController.m */,
+				5B5B47362856DE23003E6BBE /* LoginViewModel.h */,
+				5B5B47372856DE23003E6BBE /* LoginViewModel.m */,
+				5B5B47432857126F003E6BBE /* StoryboardExtension.h */,
+				5B5B47442857126F003E6BBE /* StoryboardExtension.m */,
 				5B4826DA28517FB200B17593 /* Main.storyboard */,
 				5B4826DD28517FB400B17593 /* Assets.xcassets */,
 				5B4826DF28517FB400B17593 /* LaunchScreen.storyboard */,
@@ -101,18 +131,10 @@
 		8E2CF110C713F174D2A6D4A5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				B55598054A580EE635E1A425 /* Pods-RACDemo.debug.xcconfig */,
-				8D912D2AE9891D43FDBB77F6 /* Pods-RACDemo.release.xcconfig */,
+				577F14C5F0A4AF5A783A46BA /* Pods-RACDemo.debug.xcconfig */,
+				5C6B6F3DB67A7554AAC00047 /* Pods-RACDemo.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		B567B7C4167A6D01BE096739 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				CD83F2F338F89C8810905A64 /* libPods-RACDemo.a */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,7 +144,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5B4826E728517FB400B17593 /* Build configuration list for PBXNativeTarget "RACDemo" */;
 			buildPhases = (
-				3EF478B75C6903EC9E0A97F3 /* [CP] Check Pods Manifest.lock */,
+				A765C486036A74B3957587A5 /* [CP] Check Pods Manifest.lock */,
 				5B4826CA28517FB200B17593 /* Sources */,
 				5B4826CB28517FB200B17593 /* Frameworks */,
 				5B4826CC28517FB200B17593 /* Resources */,
@@ -182,7 +204,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3EF478B75C6903EC9E0A97F3 /* [CP] Check Pods Manifest.lock */ = {
+		A765C486036A74B3957587A5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -211,13 +233,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B5B473B2857051C003E6BBE /* LoginViewController.m in Sources */,
 				5BA9A11E28532224001387E7 /* CaculatorManager.m in Sources */,
-				5B4826D928517FB200B17593 /* ViewController.m in Sources */,
+				5B5B47322856D43C003E6BBE /* SimpleViewController.m in Sources */,
 				5B4826D328517FB200B17593 /* AppDelegate.m in Sources */,
-				5BA9A11B28531D7E001387E7 /* ViewModel.m in Sources */,
+				5B5B474128570E56003E6BBE /* DelegateNextViewController.m in Sources */,
 				5B4826E428517FB400B17593 /* main.m in Sources */,
 				5B5B472F2856CA19003E6BBE /* HomeViewController.m in Sources */,
 				5B4826D628517FB200B17593 /* SceneDelegate.m in Sources */,
+				5B5B473E28570BEA003E6BBE /* DelegateViewController.m in Sources */,
+				5B5B47452857126F003E6BBE /* StoryboardExtension.m in Sources */,
+				5B5B47382856DE23003E6BBE /* LoginViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,13 +383,14 @@
 		};
 		5B4826E828517FB400B17593 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B55598054A580EE635E1A425 /* Pods-RACDemo.debug.xcconfig */;
+			baseConfigurationReference = 577F14C5F0A4AF5A783A46BA /* Pods-RACDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 83J8888V77;
+				GCC_PREFIX_HEADER = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RACDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -385,13 +412,14 @@
 		};
 		5B4826E928517FB400B17593 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8D912D2AE9891D43FDBB77F6 /* Pods-RACDemo.release.xcconfig */;
+			baseConfigurationReference = 5C6B6F3DB67A7554AAC00047 /* Pods-RACDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 83J8888V77;
+				GCC_PREFIX_HEADER = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RACDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

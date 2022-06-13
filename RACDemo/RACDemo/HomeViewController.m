@@ -6,10 +6,17 @@
 //
 
 #import "HomeViewController.h"
-#import "ViewController.h"
-@interface HomeViewController ()
+#import "LoginViewController.h"
+#import "SimpleViewController.h"
+#import "DelegateViewController.h"
+#import "StoryboardExtension.h"
+@interface HomeViewController ()<UITableViewDelegate, UITableViewDataSource>
 
-@property (nonatomic, strong) UIButton *customBtn;
+@property (nonatomic, strong) UITableView *tableView;
+
+@property (nonatomic, strong) NSArray *data;
+
+@property (nonatomic, strong) NSArray *pages;
 
 @end
 
@@ -19,35 +26,48 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:self.customBtn];
-    self.navigationItem.rightBarButtonItem = item;
+    self.data = @[@"RAC简单实用", @"RACSubject替换代理", @"MVVM+RAC登录页Demo"];
+    self.pages = @[
+        [SimpleViewController new],
+        [StoryboardExtension initialViewController:@"DelegateViewController"],
+        [StoryboardExtension initialViewController:@"LoginViewController"],
+
+        
+    ];
+    
+    [self.view addSubview:self.tableView];
 }
 
 
-- (void)pushRAC {
-    [self.navigationController pushViewController:[ViewController new] animated:YES];
+
+#pragma mark -- UITableViewDelegate && UITableDataSource
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UIViewController *vc = self.pages[indexPath.row];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(UITableViewCell.class) forIndexPath:indexPath];
+    cell.textLabel.text = self.data[indexPath.row];
+    return cell;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.data.count;
 }
 
 
-- (UIButton *)customBtn {
-    if (!_customBtn) {
-        _customBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_customBtn setTitle:@"rac" forState:UIControlStateNormal];
-        [_customBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        [_customBtn addTarget:self action:@selector(pushRAC) forControlEvents:UIControlEventTouchUpInside];
+- (UITableView *)tableView {
+    if (!_tableView) {
+        _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+        [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:NSStringFromClass(UITableViewCell.class)];
+        _tableView.delegate = self;
+        _tableView.dataSource = self;
     }
-    return _customBtn;
+    return _tableView;
 }
-
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
