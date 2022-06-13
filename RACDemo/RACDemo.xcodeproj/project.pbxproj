@@ -15,6 +15,7 @@
 		5B4826DE28517FB400B17593 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B4826DD28517FB400B17593 /* Assets.xcassets */; };
 		5B4826E128517FB400B17593 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B4826DF28517FB400B17593 /* LaunchScreen.storyboard */; };
 		5B4826E428517FB400B17593 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B4826E328517FB400B17593 /* main.m */; };
+		5B5B472F2856CA19003E6BBE /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5B472E2856CA19003E6BBE /* HomeViewController.m */; };
 		5BA9A11B28531D7E001387E7 /* ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA9A11A28531D7E001387E7 /* ViewModel.m */; };
 		5BA9A11E28532224001387E7 /* CaculatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA9A11D28532224001387E7 /* CaculatorManager.m */; };
 /* End PBXBuildFile section */
@@ -32,6 +33,8 @@
 		5B4826E028517FB400B17593 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B4826E228517FB400B17593 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B4826E328517FB400B17593 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5B5B472D2856CA19003E6BBE /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		5B5B472E2856CA19003E6BBE /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		5BA9A11928531D7E001387E7 /* ViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewModel.h; sourceTree = "<group>"; };
 		5BA9A11A28531D7E001387E7 /* ViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewModel.m; sourceTree = "<group>"; };
 		5BA9A11C28532224001387E7 /* CaculatorManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CaculatorManager.h; sourceTree = "<group>"; };
@@ -76,6 +79,8 @@
 			children = (
 				5B4826D128517FB200B17593 /* AppDelegate.h */,
 				5B4826D228517FB200B17593 /* AppDelegate.m */,
+				5B5B472D2856CA19003E6BBE /* HomeViewController.h */,
+				5B5B472E2856CA19003E6BBE /* HomeViewController.m */,
 				5BA9A11C28532224001387E7 /* CaculatorManager.h */,
 				5BA9A11D28532224001387E7 /* CaculatorManager.m */,
 				5B4826D428517FB200B17593 /* SceneDelegate.h */,
@@ -211,6 +216,7 @@
 				5B4826D328517FB200B17593 /* AppDelegate.m in Sources */,
 				5BA9A11B28531D7E001387E7 /* ViewModel.m in Sources */,
 				5B4826E428517FB400B17593 /* main.m in Sources */,
+				5B5B472F2856CA19003E6BBE /* HomeViewController.m in Sources */,
 				5B4826D628517FB200B17593 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
