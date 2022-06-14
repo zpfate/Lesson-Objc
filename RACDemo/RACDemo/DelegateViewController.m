@@ -9,8 +9,6 @@
 #import "DelegateNextViewController.h"
 @interface DelegateViewController ()
 
-@property (nonatomic, strong) RACSubject *subject;
-
 @end
 
 @implementation DelegateViewController
@@ -19,7 +17,6 @@
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        _subject = [RACSubject subject];
     }
     return self;
 }
@@ -27,7 +24,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    _subject = [RACSubject subject];
 }
 
 #pragma mark - Navigation
@@ -37,9 +33,9 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
     DelegateNextViewController *nextVC = (DelegateNextViewController *)segue.destinationViewController;
-    nextVC.subject = self.subject;
-    [self.subject subscribeNext:^(id x) {
-        NSLog(@"点击了Send Message");
+    nextVC.subject = [RACSubject subject];
+    [nextVC.subject subscribeNext:^(id x) {
+        NSLog(@"点击了Send Message, %@", x);
     }];
 }
 

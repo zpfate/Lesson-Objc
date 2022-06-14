@@ -26,7 +26,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.data = @[@"RAC简单实用", @"RACSubject替换代理", @"MVVM+RAC登录页Demo"];
+    self.data = @[@"RAC基础使用", @"RACSubject替换代理", @"MVVM+RAC登录页Demo"];
     self.pages = @[
         [SimpleViewController new],
         [StoryboardExtension initialViewController:@"DelegateViewController"],
