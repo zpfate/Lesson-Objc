@@ -11,6 +11,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LoginViewModel : NSObject
 
+@property (nonatomic, strong) NSString *account;
+
+@property (nonatomic, strong) NSString *pwd;
+
+
 @end
 
 NS_ASSUME_NONNULL_END
