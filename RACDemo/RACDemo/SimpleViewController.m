@@ -11,9 +11,7 @@
 
 @property (nonatomic, strong) UITableView *tableView;
 
-@property (nonatomic, strong) NSArray *data;
-
-@property (nonatomic, strong) NSArray *selectors;
+@property (nonatomic, strong) NSDictionary *data;
 
 @end
 
@@ -24,8 +22,16 @@
     // Do any additional setup after loading the view.
     
     
-    self.data = @[@"RACSignal", @"RACSubject", @"RACReplaySubject", @"RACTuple/RACSequence", @"RACCommand", @"RACMulticastConnection"];
-    self.selectors = @[@"rac_signal", @"rac_subject", @"rac_replaySubject", @"rac_sequence", @"rac_command", @"rac_multicastConnection"];
+    self.data = @{@"RACSignal" : @"rac_signal",
+                  @"RACSubject" : @"rac_subject",
+                  @"RACReplaySubject" : @"rac_replaySubject",
+                  @"RACTuple/RACSequence" : @"rac_sequence",
+                  @"RACCommand" : @"rac_command",
+                  @"RACMulticastConnection" : @"rac_multicastConnection",
+                  @"FlatternMap" : @"rac_flatternMap",
+                  @"Concat" : @"rac_concat",
+                  @"Then" : @"rac_then"
+                };
 
     [self.view addSubview:self.tableView];
     
@@ -191,7 +197,7 @@
        }];
        
        // 2.创建连接
-       RACMulticastConnection *connect = [signal publish];
+       RACMulticastConnection *connect = [signal2 publish];
        
        // 3.订阅信号，
        // 注意：订阅信号，也不能激活信号，只是保存订阅者到数组，必须通过连接,当调用连接，就会一次性调用所有订阅者的sendNext:
@@ -204,6 +210,82 @@
        }];
        // 4.连接,激活信号
        [connect connect];
+}
+
+- (void)rac_flatternMap {
+    /* FlatternMap中的Block返回信号。
+     * Map中的Block返回对象。
+     * 开发中，如果信号发出的值不是信号，映射一般使用Map
+     * 开发中，如果信号发出的值是信号，映射一般使用FlatternMap
+     */
+    
+    
+    RACSubject *signalOfSignals = [RACSubject subject];
+    RACSubject *signal = [RACSubject subject];
+    
+    [[signalOfSignals flattenMap:^RACStream *(id value) {
+        /// 当signalOfsignals的signals发出信号才会调用
+        return  value;
+    }] subscribeNext:^(id x) {
+        //只有signalOfsignals的signal发出信号才会调用，因为内部订阅了bindBlock中返回的信号，也就是flattenMap返回的信号。
+        // 也就是flattenMap返回的信号发出内容，才会调用。
+        NSLog(@"x===%@", x);
+    }];
+    [signalOfSignals sendNext:signal];
+    [signal sendNext:@1];
+}
+
+
+/// 拼接信号
+- (void)rac_concat {
+    
+    RACSignal *signalA = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+         [subscriber sendNext:@1];
+         [subscriber sendCompleted];
+         return nil;
+     }];
+     RACSignal *signalB = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+         [subscriber sendNext:@2];
+         return nil;
+     }];
+     
+     // 把signalA拼接到signalB后，signalA发送完成，signalB才会被激活。
+     RACSignal *concatSignal = [signalA concat:signalB];
+    [concatSignal subscribeNext:^(id x) {
+         
+         NSLog(@"%@",x);
+         
+     }];
+     
+    // concat底层实现:
+   // 1.当拼接信号被订阅，就会调用拼接信号的didSubscribe
+   // 2.didSubscribe中，会先订阅第一个源信号（signalA）
+   // 3.会执行第一个源信号（signalA）的didSubscribe
+   // 4.第一个源信号（signalA）didSubscribe中发送值，就会调用第一个源信号（signalA）订阅者的nextBlock,通过拼接信号的订阅者把值发送出来.
+   // 5.第一个源信号（signalA）didSubscribe中发送完成，就会调用第一个源信号（signalA）订阅者的completedBlock,订阅第二个源信号（signalB）这时候才激活（signalB）。
+   // 6.订阅第二个源信号（signalB）,执行第二个源信号（signalB）的didSubscribe
+   // 7.第二个源信号（signalA）didSubscribe中发送值,就会通过拼接信号的订阅者把值发送出来.
+}
+
+- (void)rac_then {
+    // then:用于连接两个信号，当第一个信号完成，才会连接then返回的信号
+   // 注意使用then，之前信号的值会被忽略掉.
+   // 底层实现：1、先过滤掉之前的信号发出的值。2.使用concat连接then返回的信号
+   [[[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+    
+       [subscriber sendNext:@1];
+       [subscriber sendCompleted];
+       return nil;
+   }] then:^RACSignal *{
+       return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+           [subscriber sendNext:@2];
+           return nil;
+       }];
+   }] subscribeNext:^(id x) {
+     
+       // 只能接收到第二个信号的值，也就是then返回信号的值
+       NSLog(@"%@",x);
+   }];
 }
 
 
@@ -266,6 +348,7 @@
        [self rac_liftSelector:@selector(updateUIWithR1:r2:) withSignalsFromArray:@[request1,request2]];
 }
 
+
 // 更新UI
 - (void)updateUIWithR1:(id)data r2:(id)data1 {
     NSLog(@"更新UI%@  %@",data,data1);
@@ -278,8 +361,8 @@
 #pragma mark -- UITableViewDelegate && UITableDataSource
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    SEL sel = NSSelectorFromString(self.selectors[indexPath.row]);
+    NSString *key = self.data.allKeys[indexPath.row];
+    SEL sel = NSSelectorFromString(self.data[key]);
     if ([self respondsToSelector:sel]) {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
@@ -291,7 +374,9 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(UITableViewCell.class) forIndexPath:indexPath];
-    cell.textLabel.text = self.data[indexPath.row];
+    
+    NSString *key = self.data.allKeys[indexPath.row];
+    cell.textLabel.text = key;
     return cell;
 }
 

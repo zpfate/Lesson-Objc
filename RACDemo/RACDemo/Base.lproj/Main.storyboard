@@ -82,6 +82,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="登录"/>
+                                <connections>
+                                    <action selector="loginAction:" destination="s3h-PN-c37" eventType="touchUpInside" id="3T9-Gc-Y0M"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入用户名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zMx-Xq-lbu">
                                 <rect key="frame" x="97" y="205" width="229" height="34"/>
@@ -93,6 +96,10 @@
                         <viewLayoutGuide key="safeArea" id="wLE-rB-Q6k"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="pwdTF" destination="Y8j-3s-wDa" id="dZ1-1e-KqB"/>
+                        <outlet property="userNameTF" destination="zMx-Xq-lbu" id="hMM-Ts-JXd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Okw-bW-bwr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

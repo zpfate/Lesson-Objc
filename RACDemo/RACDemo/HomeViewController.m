@@ -31,13 +31,10 @@
         [SimpleViewController new],
         [StoryboardExtension initialViewController:@"DelegateViewController"],
         [StoryboardExtension initialViewController:@"LoginViewController"],
-
-        
     ];
     
     [self.view addSubview:self.tableView];
 }
-
 
 
 #pragma mark -- UITableViewDelegate && UITableDataSource

@@ -77,6 +77,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5B3C2074286B050300439B4D /* RACSubject */ = {
+			isa = PBXGroup;
+			children = (
+				5B5B473C28570BEA003E6BBE /* DelegateViewController.h */,
+				5B5B473D28570BEA003E6BBE /* DelegateViewController.m */,
+				5B5B473F28570E56003E6BBE /* DelegateNextViewController.h */,
+				5B5B474028570E56003E6BBE /* DelegateNextViewController.m */,
+			);
+			path = RACSubject;
+			sourceTree = "<group>";
+		};
+		5B3C2075286B053100439B4D /* ChainProgramming */ = {
+			isa = PBXGroup;
+			children = (
+				5BA9A11C28532224001387E7 /* CaculatorManager.h */,
+				5BA9A11D28532224001387E7 /* CaculatorManager.m */,
+			);
+			path = ChainProgramming;
+			sourceTree = "<group>";
+		};
 		5B4826C528517FB100B17593 = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +118,9 @@
 		5B4826D028517FB200B17593 /* RACDemo */ = {
 			isa = PBXGroup;
 			children = (
+				5B3C2075286B053100439B4D /* ChainProgramming */,
+				5B3C2074286B050300439B4D /* RACSubject */,
+				5BA5A46F28654B4D00E1629B /* Login */,
 				5B5B474228570FE1003E6BBE /* PrefixHeader.pch */,
 				5B4826D128517FB200B17593 /* AppDelegate.h */,
 				5B4826D228517FB200B17593 /* AppDelegate.m */,
@@ -105,18 +128,8 @@
 				5B5B472E2856CA19003E6BBE /* HomeViewController.m */,
 				5B5B47302856D43C003E6BBE /* SimpleViewController.h */,
 				5B5B47312856D43C003E6BBE /* SimpleViewController.m */,
-				5B5B473C28570BEA003E6BBE /* DelegateViewController.h */,
-				5B5B473D28570BEA003E6BBE /* DelegateViewController.m */,
-				5B5B473F28570E56003E6BBE /* DelegateNextViewController.h */,
-				5B5B474028570E56003E6BBE /* DelegateNextViewController.m */,
-				5B5B47392857051C003E6BBE /* LoginViewController.h */,
-				5B5B473A2857051C003E6BBE /* LoginViewController.m */,
-				5BA9A11C28532224001387E7 /* CaculatorManager.h */,
-				5BA9A11D28532224001387E7 /* CaculatorManager.m */,
 				5B4826D428517FB200B17593 /* SceneDelegate.h */,
 				5B4826D528517FB200B17593 /* SceneDelegate.m */,
-				5B5B47362856DE23003E6BBE /* LoginViewModel.h */,
-				5B5B47372856DE23003E6BBE /* LoginViewModel.m */,
 				5B5B47432857126F003E6BBE /* StoryboardExtension.h */,
 				5B5B47442857126F003E6BBE /* StoryboardExtension.m */,
 				5B4826DA28517FB200B17593 /* Main.storyboard */,
@@ -126,6 +139,17 @@
 				5B4826E328517FB400B17593 /* main.m */,
 			);
 			path = RACDemo;
+			sourceTree = "<group>";
+		};
+		5BA5A46F28654B4D00E1629B /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				5B5B47392857051C003E6BBE /* LoginViewController.h */,
+				5B5B473A2857051C003E6BBE /* LoginViewController.m */,
+				5B5B47362856DE23003E6BBE /* LoginViewModel.h */,
+				5B5B47372856DE23003E6BBE /* LoginViewModel.m */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		8E2CF110C713F174D2A6D4A5 /* Pods */ = {
