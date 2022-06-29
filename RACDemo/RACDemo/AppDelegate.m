@@ -17,10 +17,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    
-    int result = [CaculatorMaker makeCaculator:^(CaculatorManager * _Nonnull make) {
-        make.add(5).add(05);
-    }];
+    CaculatorMaker *maker = [CaculatorMaker new];
+    maker.add(5).minus(3).printResult();
     
     return YES;
 }

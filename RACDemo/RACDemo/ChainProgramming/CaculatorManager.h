@@ -24,6 +24,7 @@ typedef CaculatorMaker *_Nonnull(^CaculatorBlock)(int num);
 
 @property (nonatomic, readonly) CaculatorBlock divide;
 
+@property (nonatomic, copy) void(^printResult)(void);
 
 @end
 
