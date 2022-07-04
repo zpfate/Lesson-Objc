@@ -37,4 +37,11 @@
 }
 */
 
+- (RACSubject *)subject {
+    if (!_subject) {
+        _subject = [RACSubject subject];
+    }
+    return _subject;
+}
+
 @end

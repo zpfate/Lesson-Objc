@@ -19,6 +19,11 @@
     
     CaculatorMaker *maker = [CaculatorMaker new];
     maker.add(5).minus(3).printResult();
+   
+    /// 链式编程
+    [CaculatorMaker makeCaculator:^(CaculatorMaker * _Nonnull make) {
+        make.add(5).minus(3).printResult();
+    }];
     
     return YES;
 }

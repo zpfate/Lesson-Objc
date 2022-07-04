@@ -1,15 +1,12 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
-source 'https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git'
-
-inhibit_all_warnings!
+ platform :ios, '9.0'
 
 target 'RACDemo' do
   # Comment the next line if you don't want to use dynamic frameworks
-#  use_frameworks!
+  use_frameworks!
 
-pod 'ReactiveCocoa', '~> 2.5'
-
+  
+  pod 'ReactiveObjC'
   # Pods for RACDemo
 
 end

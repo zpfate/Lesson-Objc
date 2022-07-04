@@ -56,6 +56,11 @@
     };
 }
 
++ (int)makeCaculator:(void (^)(CaculatorMaker * _Nonnull))block {
+    CaculatorMaker *maker = [CaculatorMaker new];
+    block(maker);
+    return maker.result;
+}
 
 @end
 

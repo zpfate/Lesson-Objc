@@ -15,7 +15,6 @@ typedef CaculatorMaker *_Nonnull(^CaculatorBlock)(int num);
 
 @interface CaculatorMaker : NSObject
 
-
 @property (nonatomic, readonly) CaculatorBlock add;
 
 @property (nonatomic, readonly) CaculatorBlock minus;
@@ -25,6 +24,10 @@ typedef CaculatorMaker *_Nonnull(^CaculatorBlock)(int num);
 @property (nonatomic, readonly) CaculatorBlock divide;
 
 @property (nonatomic, copy) void(^printResult)(void);
+
+
++ (int)makeCaculator:(void(^)(CaculatorMaker *))block;
+
 
 @end
 

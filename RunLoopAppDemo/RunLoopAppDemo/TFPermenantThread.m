@@ -59,7 +59,6 @@
          
                 [runLoop runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];
                 
-                
             
                 // 启动
                 // 第三个参数returnAfterSourceHandled

@@ -33,9 +33,14 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
     DelegateNextViewController *nextVC = (DelegateNextViewController *)segue.destinationViewController;
-    nextVC.subject = [RACSubject subject];
-    [nextVC.subject subscribeNext:^(id x) {
-        NSLog(@"点击了Send Message, %@", x);
+//    [nextVC.subject subscribeNext:^(id x) {
+//        NSLog(@"点击了Send Message, %@", x);
+//    }];
+    
+    /// 万物皆信号
+    [[nextVC rac_signalForSelector:@selector(sendMessage:)] subscribeNext:^(RACTuple * _Nullable x) {
+       
+        NSLog(@"收到信号: %@", x);
     }];
 }
 

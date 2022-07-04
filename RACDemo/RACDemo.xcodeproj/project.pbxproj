@@ -20,13 +20,17 @@
 		5B5B473E28570BEA003E6BBE /* DelegateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5B473D28570BEA003E6BBE /* DelegateViewController.m */; };
 		5B5B474128570E56003E6BBE /* DelegateNextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5B474028570E56003E6BBE /* DelegateNextViewController.m */; };
 		5B5B47452857126F003E6BBE /* StoryboardExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5B47442857126F003E6BBE /* StoryboardExtension.m */; };
+		5B9A43D62872D2A800725533 /* KVOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9A43D52872D2A800725533 /* KVOViewController.m */; };
+		5B9A43DA2872E9D400725533 /* json.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B9A43D92872E9D400725533 /* json.plist */; };
+		5B9A43DD2872EAE300725533 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9A43DC2872EAE300725533 /* Person.m */; };
 		5BA9A11E28532224001387E7 /* CaculatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA9A11D28532224001387E7 /* CaculatorManager.m */; };
-		FE1BDDB64B78226F13AFD200 /* libPods-RACDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B56479B8C7D5A61B1D405EC /* libPods-RACDemo.a */; };
+		D4336353422EE15DA6636CA3 /* Pods_RACDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08B05F8A09F0FCF8253348E1 /* Pods_RACDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1B56479B8C7D5A61B1D405EC /* libPods-RACDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RACDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		577F14C5F0A4AF5A783A46BA /* Pods-RACDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACDemo.debug.xcconfig"; path = "Target Support Files/Pods-RACDemo/Pods-RACDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		08B05F8A09F0FCF8253348E1 /* Pods_RACDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RACDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		123BBE00E29D87AD572115DB /* Pods-RACDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACDemo.release.xcconfig"; path = "Target Support Files/Pods-RACDemo/Pods-RACDemo.release.xcconfig"; sourceTree = "<group>"; };
+		531E56A8BE165BA825E78B78 /* Pods-RACDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACDemo.debug.xcconfig"; path = "Target Support Files/Pods-RACDemo/Pods-RACDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		5B4826CE28517FB200B17593 /* RACDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RACDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B4826D128517FB200B17593 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5B4826D228517FB200B17593 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -52,9 +56,13 @@
 		5B5B474228570FE1003E6BBE /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		5B5B47432857126F003E6BBE /* StoryboardExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StoryboardExtension.h; sourceTree = "<group>"; };
 		5B5B47442857126F003E6BBE /* StoryboardExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StoryboardExtension.m; sourceTree = "<group>"; };
+		5B9A43D42872D2A800725533 /* KVOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVOViewController.h; sourceTree = "<group>"; };
+		5B9A43D52872D2A800725533 /* KVOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVOViewController.m; sourceTree = "<group>"; };
+		5B9A43D92872E9D400725533 /* json.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = json.plist; sourceTree = "<group>"; };
+		5B9A43DB2872EAE300725533 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		5B9A43DC2872EAE300725533 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		5BA9A11C28532224001387E7 /* CaculatorManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CaculatorManager.h; sourceTree = "<group>"; };
 		5BA9A11D28532224001387E7 /* CaculatorManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CaculatorManager.m; sourceTree = "<group>"; };
-		5C6B6F3DB67A7554AAC00047 /* Pods-RACDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACDemo.release.xcconfig"; path = "Target Support Files/Pods-RACDemo/Pods-RACDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,22 +70,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE1BDDB64B78226F13AFD200 /* libPods-RACDemo.a in Frameworks */,
+				D4336353422EE15DA6636CA3 /* Pods_RACDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2058B76740768A20C1EFE688 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				1B56479B8C7D5A61B1D405EC /* libPods-RACDemo.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		5B3C2074286B050300439B4D /* RACSubject */ = {
+		5B3C2074286B050300439B4D /* Subject */ = {
 			isa = PBXGroup;
 			children = (
 				5B5B473C28570BEA003E6BBE /* DelegateViewController.h */,
@@ -85,7 +85,7 @@
 				5B5B473F28570E56003E6BBE /* DelegateNextViewController.h */,
 				5B5B474028570E56003E6BBE /* DelegateNextViewController.m */,
 			);
-			path = RACSubject;
+			path = Subject;
 			sourceTree = "<group>";
 		};
 		5B3C2075286B053100439B4D /* ChainProgramming */ = {
@@ -102,8 +102,8 @@
 			children = (
 				5B4826D028517FB200B17593 /* RACDemo */,
 				5B4826CF28517FB200B17593 /* Products */,
-				8E2CF110C713F174D2A6D4A5 /* Pods */,
-				2058B76740768A20C1EFE688 /* Frameworks */,
+				986D26F499D94D108FC67E6C /* Pods */,
+				BFC82680478E3EB4199AB59B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,7 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				5B3C2075286B053100439B4D /* ChainProgramming */,
-				5B3C2074286B050300439B4D /* RACSubject */,
+				5B3C2074286B050300439B4D /* Subject */,
 				5BA5A46F28654B4D00E1629B /* Login */,
 				5B5B474228570FE1003E6BBE /* PrefixHeader.pch */,
 				5B4826D128517FB200B17593 /* AppDelegate.h */,
@@ -128,6 +128,10 @@
 				5B5B472E2856CA19003E6BBE /* HomeViewController.m */,
 				5B5B47302856D43C003E6BBE /* SimpleViewController.h */,
 				5B5B47312856D43C003E6BBE /* SimpleViewController.m */,
+				5B9A43DB2872EAE300725533 /* Person.h */,
+				5B9A43DC2872EAE300725533 /* Person.m */,
+				5B9A43D42872D2A800725533 /* KVOViewController.h */,
+				5B9A43D52872D2A800725533 /* KVOViewController.m */,
 				5B4826D428517FB200B17593 /* SceneDelegate.h */,
 				5B4826D528517FB200B17593 /* SceneDelegate.m */,
 				5B5B47432857126F003E6BBE /* StoryboardExtension.h */,
@@ -137,6 +141,7 @@
 				5B4826DF28517FB400B17593 /* LaunchScreen.storyboard */,
 				5B4826E228517FB400B17593 /* Info.plist */,
 				5B4826E328517FB400B17593 /* main.m */,
+				5B9A43D92872E9D400725533 /* json.plist */,
 			);
 			path = RACDemo;
 			sourceTree = "<group>";
@@ -152,13 +157,21 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
-		8E2CF110C713F174D2A6D4A5 /* Pods */ = {
+		986D26F499D94D108FC67E6C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				577F14C5F0A4AF5A783A46BA /* Pods-RACDemo.debug.xcconfig */,
-				5C6B6F3DB67A7554AAC00047 /* Pods-RACDemo.release.xcconfig */,
+				531E56A8BE165BA825E78B78 /* Pods-RACDemo.debug.xcconfig */,
+				123BBE00E29D87AD572115DB /* Pods-RACDemo.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		BFC82680478E3EB4199AB59B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				08B05F8A09F0FCF8253348E1 /* Pods_RACDemo.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,10 +181,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5B4826E728517FB400B17593 /* Build configuration list for PBXNativeTarget "RACDemo" */;
 			buildPhases = (
-				A765C486036A74B3957587A5 /* [CP] Check Pods Manifest.lock */,
+				5DB9B9145E1E16CD429A034F /* [CP] Check Pods Manifest.lock */,
 				5B4826CA28517FB200B17593 /* Sources */,
 				5B4826CB28517FB200B17593 /* Frameworks */,
 				5B4826CC28517FB200B17593 /* Resources */,
+				DAF3531F3D199A5DD26FAC52 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -221,6 +235,7 @@
 			files = (
 				5B4826E128517FB400B17593 /* LaunchScreen.storyboard in Resources */,
 				5B4826DE28517FB400B17593 /* Assets.xcassets in Resources */,
+				5B9A43DA2872E9D400725533 /* json.plist in Resources */,
 				5B4826DC28517FB200B17593 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -228,7 +243,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		A765C486036A74B3957587A5 /* [CP] Check Pods Manifest.lock */ = {
+		5DB9B9145E1E16CD429A034F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -250,6 +265,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		DAF3531F3D199A5DD26FAC52 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RACDemo/Pods-RACDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RACDemo/Pods-RACDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RACDemo/Pods-RACDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -262,9 +294,11 @@
 				5B5B47322856D43C003E6BBE /* SimpleViewController.m in Sources */,
 				5B4826D328517FB200B17593 /* AppDelegate.m in Sources */,
 				5B5B474128570E56003E6BBE /* DelegateNextViewController.m in Sources */,
+				5B9A43D62872D2A800725533 /* KVOViewController.m in Sources */,
 				5B4826E428517FB400B17593 /* main.m in Sources */,
 				5B5B472F2856CA19003E6BBE /* HomeViewController.m in Sources */,
 				5B4826D628517FB200B17593 /* SceneDelegate.m in Sources */,
+				5B9A43DD2872EAE300725533 /* Person.m in Sources */,
 				5B5B473E28570BEA003E6BBE /* DelegateViewController.m in Sources */,
 				5B5B47452857126F003E6BBE /* StoryboardExtension.m in Sources */,
 				5B5B47382856DE23003E6BBE /* LoginViewModel.m in Sources */,
@@ -407,7 +441,7 @@
 		};
 		5B4826E828517FB400B17593 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 577F14C5F0A4AF5A783A46BA /* Pods-RACDemo.debug.xcconfig */;
+			baseConfigurationReference = 531E56A8BE165BA825E78B78 /* Pods-RACDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -430,13 +464,15 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.twistedfate.www.RACDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		5B4826E928517FB400B17593 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5C6B6F3DB67A7554AAC00047 /* Pods-RACDemo.release.xcconfig */;
+			baseConfigurationReference = 123BBE00E29D87AD572115DB /* Pods-RACDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -459,6 +495,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.twistedfate.www.RACDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

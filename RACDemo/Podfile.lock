@@ -1,22 +1,16 @@
 PODS:
-  - ReactiveCocoa (2.5):
-    - ReactiveCocoa/UI (= 2.5)
-  - ReactiveCocoa/Core (2.5):
-    - ReactiveCocoa/no-arc
-  - ReactiveCocoa/no-arc (2.5)
-  - ReactiveCocoa/UI (2.5):
-    - ReactiveCocoa/Core
+  - ReactiveObjC (3.1.1)
 
 DEPENDENCIES:
-  - ReactiveCocoa (~> 2.5)
+  - ReactiveObjC
 
 SPEC REPOS:
-  https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git:
-    - ReactiveCocoa
+  trunk:
+    - ReactiveObjC
 
 SPEC CHECKSUMS:
-  ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
+  ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
 
-PODFILE CHECKSUM: 0e80990f06ad1de9ed63273fa1535284b9c9f2d4
+PODFILE CHECKSUM: 23287f05d118ddb26fcb64d01b5717734923ae20
 
 COCOAPODS: 1.11.3

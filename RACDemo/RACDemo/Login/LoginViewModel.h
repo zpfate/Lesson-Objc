@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) NSString *pwd;
 
+@property (nonatomic, strong) RACCommand *loginCommand;
 
 @end
 

@@ -8,7 +8,7 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
-#import <ReactiveCocoa/ReactiveCocoa.h>
+#import <ReactiveObjC/ReactiveObjC.h>
 #import "StoryboardExtension.h"
 
 // Include any system framework and library headers here that should be included in all compilation units.

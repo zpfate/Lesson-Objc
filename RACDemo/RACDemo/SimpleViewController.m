@@ -105,6 +105,11 @@
 
 - (void)rac_sequence {
     
+    
+    RACTuple *tuple = [RACTuple tupleWithObjectsFromArray:@[@"aaa", @"bbb", @123]];
+    NSString *str = tuple[0];
+    NSLog(@"tuple[0] = %@", str);
+    
     NSArray *numbers = @[@1, @2, @3, @4, @5];
     // 第一步: 把数组转换成集合RACSequence numbers.rac_sequence
     // 第二步: 把集合RACSequence转换RACSignal信号类, numbers.rac_sequence.signal
@@ -120,6 +125,15 @@
         RACTupleUnpack(NSString *key, NSString *value) = x;
         NSLog(@"key = %@, value = %@", key, value);
     }];
+    
+    
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"json.plist" ofType:nil];
+    NSArray *dataArr = [NSArray arrayWithContentsOfFile:filePath];
+    NSMutableArray *results = [NSMutableArray array];
+    [dataArr.rac_sequence.signal subscribeNext:^(id  _Nullable x) {
+            
+    }];
+    
 
 }
 
@@ -223,14 +237,14 @@
     RACSubject *signalOfSignals = [RACSubject subject];
     RACSubject *signal = [RACSubject subject];
     
-    [[signalOfSignals flattenMap:^RACStream *(id value) {
-        /// 当signalOfsignals的signals发出信号才会调用
-        return  value;
-    }] subscribeNext:^(id x) {
-        //只有signalOfsignals的signal发出信号才会调用，因为内部订阅了bindBlock中返回的信号，也就是flattenMap返回的信号。
-        // 也就是flattenMap返回的信号发出内容，才会调用。
-        NSLog(@"x===%@", x);
-    }];
+//    [[signalOfSignals flattenMap:^RACStream *(id value) {
+//        /// 当signalOfsignals的signals发出信号才会调用
+//        return  value;
+//    }] subscribeNext:^(id x) {
+//        //只有signalOfsignals的signal发出信号才会调用，因为内部订阅了bindBlock中返回的信号，也就是flattenMap返回的信号。
+//        // 也就是flattenMap返回的信号发出内容，才会调用。
+//        NSLog(@"x===%@", x);
+//    }];
     [signalOfSignals sendNext:signal];
     [signal sendNext:@1];
 }
