@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, assign) NSInteger age;
 
++ (instancetype)personWithDict:(NSDictionary *)dict;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -6,7 +6,7 @@
 //
 
 #import "SimpleViewController.h"
-
+#import "Person.h"
 @interface SimpleViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
@@ -130,10 +130,18 @@
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"json.plist" ofType:nil];
     NSArray *dataArr = [NSArray arrayWithContentsOfFile:filePath];
     NSMutableArray *results = [NSMutableArray array];
-    [dataArr.rac_sequence.signal subscribeNext:^(id  _Nullable x) {
-            
+    [dataArr.rac_sequence.signal subscribeNext:^(NSDictionary * _Nullable x) {
+        Person *p = [Person personWithDict:x];
+        [results addObject:p];
     }];
+    NSLog(@"results = %@", results);
     
+    
+    NSArray *mapResults = [[dataArr.rac_sequence map:^id _Nullable(id  _Nullable value) {
+        return [Person personWithDict:value];
+    }] array];
+    NSLog(@"mapResults = %@", mapResults);
+
 
 }
 

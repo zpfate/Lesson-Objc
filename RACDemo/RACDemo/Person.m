@@ -9,4 +9,10 @@
 
 @implementation Person
 
++ (instancetype)personWithDict:(NSDictionary *)dict {
+    Person *p = [[Person alloc] init];
+    [p setValuesForKeysWithDictionary:dict];
+    return p;
+}
+
 @end
