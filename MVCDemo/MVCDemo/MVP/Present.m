@@ -9,13 +9,13 @@
 
 @implementation Present
 
-- (void)loadData {
+- (void)loadData:(void(^)(NSArray *arr))completion {
     
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"json" ofType:@"plist"];
-    
-    NSArray *data
-    
-    
+    NSArray *data = [NSArray arrayWithContentsOfFile:filePath];
+    if (completion) {
+        completion(data);
+    }
 }
 
 @end

@@ -40,7 +40,8 @@
     if (!_addBtn) {
         _addBtn = [[UIButton alloc] initWithFrame:CGRectZero];
         [_addBtn setTitle:@"+" forState:UIControlStateNormal];
-//        _addBtn.backgroundColor = []
+        _addBtn.backgroundColor = [UIColor blueColor];
+//        _addBtn.
     }
     return _addBtn;
 }
