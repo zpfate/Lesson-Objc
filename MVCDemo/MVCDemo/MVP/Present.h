@@ -9,9 +9,15 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class MVPModel;
+
 @interface Present : NSObject
 
-@property (nonatomic, strong) NSMutableArray *data;
+- (void)loadData:(void(^)(NSArray *arr))completion;
+
+- (NSInteger)count;
+
+- (MVPModel *)modelAtIndex:(NSInteger)index;
 
 @end
 

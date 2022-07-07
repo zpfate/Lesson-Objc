@@ -1,16 +1,20 @@
 PODS:
+  - ReactiveObjC (3.1.1)
   - TFKit (0.0.6)
 
 DEPENDENCIES:
+  - ReactiveObjC
   - TFKit
 
 SPEC REPOS:
   trunk:
+    - ReactiveObjC
     - TFKit
 
 SPEC CHECKSUMS:
+  ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
   TFKit: ec2d621b1a6ba3746db793670a75e8c7f08b5505
 
-PODFILE CHECKSUM: 0ecf74f5d7c073cd474d0a80b26332a1d1c0018b
+PODFILE CHECKSUM: 83e078ecbaaa008e7cf1f28c436dcda97dae2bd6
 
 COCOAPODS: 1.11.3

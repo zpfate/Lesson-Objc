@@ -9,4 +9,14 @@
 
 @implementation MVPModel
 
++ (instancetype)initWithDict:(NSDictionary *)dict {
+    MVPModel *model = [[MVPModel alloc] init];
+    [model setValuesForKeysWithDictionary:dict];
+    return model;
+}
+
+- (void)setValue:(id)value forUndefinedKey:(NSString *)key {
+    NSLog(@"undefined Key: %@", key);
+}
+
 @end

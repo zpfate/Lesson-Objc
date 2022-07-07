@@ -126,7 +126,6 @@
         NSLog(@"key = %@, value = %@", key, value);
     }];
     
-    
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"json.plist" ofType:nil];
     NSArray *dataArr = [NSArray arrayWithContentsOfFile:filePath];
     NSMutableArray *results = [NSMutableArray array];

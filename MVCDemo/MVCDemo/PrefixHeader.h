@@ -8,5 +8,6 @@
 #ifndef PrefixHeader_h
 #define PrefixHeader_h
 
+#import <TFKit/TFKit.h>
 
 #endif /* PrefixHeader_h */

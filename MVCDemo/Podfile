@@ -7,8 +7,8 @@ target 'MVCDemo' do
 
   
   pod 'TFKit'
-  pod 'ReactiveObjc'
-  pod 'Masonary'
+#  pod 'Masonary'
+  pod 'ReactiveObjC'
   
   # Pods for MVCDemo
 
