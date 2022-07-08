@@ -38,6 +38,7 @@
 }
 
 - (void)rac_signal {
+    
     // 1.创建信号，首先把didSubscribe保存到信号中，还不会触发。
     // 2.当信号被订阅，也就是调用signal的subscribeNext:nextBlock
     // 2.2 subscribeNext内部会创建订阅者subscriber，并且把nextBlock保存到subscriber中。
@@ -51,6 +52,7 @@
         [subscriber sendNext:@1];
         /// 如果不在发送数据,最好设置发送信号完成,内部会自动调用[RACDisposable disposable]取消订阅信号
         [subscriber sendCompleted];
+        
         return [RACDisposable disposableWithBlock:^{
             /// 信号发送完成或者发送错误,会执行block
             /// 执行完成block之后, 当前信号就不在订阅了
@@ -71,6 +73,7 @@
         // 2.调用sendNext发送信号，遍历刚刚保存的所有订阅者，一个一个调用订阅者的nextBlock。
     /// 创建信号
     RACSubject *subject = [RACSubject subject];
+    
     [subject subscribeNext:^(id x) {
         NSLog(@"第一个订阅者%@",x);
     }];
@@ -104,7 +107,6 @@
 }
 
 - (void)rac_sequence {
-    
     
     RACTuple *tuple = [RACTuple tupleWithObjectsFromArray:@[@"aaa", @"bbb", @123]];
     NSString *str = tuple[0];
@@ -382,6 +384,7 @@
 #pragma mark -- UITableViewDelegate && UITableDataSource
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     NSString *key = self.data.allKeys[indexPath.row];
     SEL sel = NSSelectorFromString(self.data[key]);
     if ([self respondsToSelector:sel]) {
@@ -393,9 +396,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(UITableViewCell.class) forIndexPath:indexPath];
-    
     NSString *key = self.data.allKeys[indexPath.row];
     cell.textLabel.text = key;
     return cell;
@@ -404,7 +405,6 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.data.count;
 }
-
 
 - (UITableView *)tableView {
     if (!_tableView) {
