@@ -7,6 +7,7 @@
 
 #import "SimpleViewController.h"
 #import "Person.h"
+
 @interface SimpleViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
@@ -21,7 +22,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    
     self.data = @{@"RACSignal" : @"rac_signal",
                   @"RACSubject" : @"rac_subject",
                   @"RACReplaySubject" : @"rac_replaySubject",
@@ -32,9 +32,7 @@
                   @"Concat" : @"rac_concat",
                   @"Then" : @"rac_then"
                 };
-
     [self.view addSubview:self.tableView];
-    
 }
 
 - (void)rac_signal {
