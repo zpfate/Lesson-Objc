@@ -13,6 +13,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *userNameTF;
 @property (weak, nonatomic) IBOutlet UITextField *pwdTF;
 
+@property (weak, nonatomic) IBOutlet UIButton *loginBtn;
+
 @end
 
 @implementation LoginViewController
@@ -29,14 +31,26 @@
 - (void)bindViewModel {
     
     // RAC(TARGET, [KEYPATH, [NIL_VALUE]]):用于给某个对象的某个属性绑定
-    
     // RAC给某个对象的某个属性绑定一个信号，只要产生信号，就会把信号的内容给对象的属性进行赋值
     RAC(self.viewModel, account) = self.userNameTF.rac_textSignal;
     RAC(self.viewModel, pwd) = self.pwdTF.rac_textSignal;
     
     // RACObserve(TARGET, KEYPATH):监听某个对象的某个属性，返回的是一个信号
+    
+    
+    [[self.loginBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+            
+        /// 响应点击事件
+        [self.viewModel login];
+    }];
 
+}
 
+- (LoginViewModel *)viewModel {
+    if (!_viewModel) {
+        _viewModel = [[LoginViewModel alloc] init];
+    }
+    return _viewModel;
 }
 
 

@@ -61,7 +61,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SAi-Bx-bmP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-216945" y="-775"/>
+            <point key="canvasLocation" x="-217145" y="-798"/>
         </scene>
         <!--登录页-->
         <scene sceneID="dbI-AZ-s9y">
@@ -94,6 +94,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="loginBtn" destination="tV7-nk-jAH" id="8jC-xE-24L"/>
                         <outlet property="pwdTF" destination="Y8j-3s-wDa" id="dZ1-1e-KqB"/>
                         <outlet property="userNameTF" destination="zMx-Xq-lbu" id="hMM-Ts-JXd"/>
                     </connections>

@@ -29,8 +29,6 @@
     self.data = @[@"RAC基础使用",
                   @"RACSubject基础使用(代理 block)",
                   @"RAC KVO/通知/Timer",
-                  @"RAC宏",
-
                   @"MVVM+RAC登录页Demo",
                 
     ];
