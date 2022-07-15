@@ -17,9 +17,7 @@
 
 - (instancetype)init {
     if (self = [super init]) {
-              
         [self setupSignal];
-        
     }
     return self;
 }
@@ -37,20 +35,18 @@
     
     /// 组合信号
     [[RACSignal combineLatest:@[phoneSignal, pwdSignal]] subscribeNext:^(RACTuple * _Nullable x) {
-        
         [self.loginCommand execute:nil];
     }];
     
     
     [[self.loginCommand.executionSignals switchToLatest] subscribeNext:^(id  _Nullable x) {
             
+        NSLog(@"登陆成功!~");
     }];
     
     [self.loginCommand.errors subscribeNext:^(NSError * _Nullable x) {
-            
-        NSLog(@"登录失败的处理逻辑");
-        //
         
+        NSLog(@"登录失败的处理逻辑");
     }];
     
     // 状态
