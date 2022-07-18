@@ -6,10 +6,9 @@
 //
 
 #import "ViewController.h"
-#import <WebKit/WebKit.h>
+#import "WebViewController.h"
+#import "PreloadWebViewController.h"
 @interface ViewController ()
-
-@property (nonatomic, strong) WKWebView *wkWebView;
 
 @end
 
@@ -18,27 +17,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
     
-    [self.view addSubview:self.wkWebView];
+}
+- (IBAction)commonWebView:(id)sender {
     
-    [self loadWebView];
+    WebViewController *webVC = [[WebViewController alloc] init];
+    [self.navigationController pushViewController:webVC animated:YES];
     
 }
 
-- (void)loadWebView {
+- (IBAction)preloadWebView:(id)sender {
     
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http:www.baidu.com"]];
-    [self.wkWebView loadRequest:request];
+    PreloadWebViewController *preloadVC = [[PreloadWebViewController alloc] init];
+    [self.navigationController pushViewController:preloadVC animated:YES];
 }
 
-
-- (WKWebView *)wkWebView {
-    
-    if (!_wkWebView) {
-        WKWebViewConfiguration *configuration = [[WKWebViewConfiguration alloc] init];
-        _wkWebView = [[WKWebView alloc] initWithFrame:self.view.bounds configuration:configuration];
-    }
-    return _wkWebView;
-}
 
 @end

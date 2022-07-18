@@ -14,6 +14,9 @@
 		5B3527B828816CB400BD0CE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B3527B728816CB400BD0CE9 /* Assets.xcassets */; };
 		5B3527BB28816CB400BD0CE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B3527B928816CB400BD0CE9 /* LaunchScreen.storyboard */; };
 		5B3527BE28816CB400BD0CE9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3527BD28816CB400BD0CE9 /* main.m */; };
+		5B3527C62884EE9100BD0CE9 /* PreloadWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3527C52884EE9100BD0CE9 /* PreloadWebViewController.m */; };
+		5B3527C92884EEB200BD0CE9 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3527C82884EEB200BD0CE9 /* WebViewController.m */; };
+		5B3527CD2884F45500BD0CE9 /* TFWebManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3527CC2884F45500BD0CE9 /* TFWebManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,12 @@
 		5B3527BA28816CB400BD0CE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B3527BC28816CB400BD0CE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B3527BD28816CB400BD0CE9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5B3527C42884EE9100BD0CE9 /* PreloadWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PreloadWebViewController.h; sourceTree = "<group>"; };
+		5B3527C52884EE9100BD0CE9 /* PreloadWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PreloadWebViewController.m; sourceTree = "<group>"; };
+		5B3527C72884EEB200BD0CE9 /* WebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		5B3527C82884EEB200BD0CE9 /* WebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		5B3527CB2884F45500BD0CE9 /* TFWebManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFWebManager.h; sourceTree = "<group>"; };
+		5B3527CC2884F45500BD0CE9 /* TFWebManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFWebManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,12 +70,17 @@
 		5B3527AA28816CB100BD0CE9 /* WebViewDemo */ = {
 			isa = PBXGroup;
 			children = (
+				5B3527CA2884F43100BD0CE9 /* WKWebViewTool */,
 				5B3527AB28816CB100BD0CE9 /* AppDelegate.h */,
 				5B3527AC28816CB100BD0CE9 /* AppDelegate.m */,
 				5B3527AE28816CB100BD0CE9 /* SceneDelegate.h */,
 				5B3527AF28816CB100BD0CE9 /* SceneDelegate.m */,
 				5B3527B128816CB100BD0CE9 /* ViewController.h */,
 				5B3527B228816CB100BD0CE9 /* ViewController.m */,
+				5B3527C72884EEB200BD0CE9 /* WebViewController.h */,
+				5B3527C82884EEB200BD0CE9 /* WebViewController.m */,
+				5B3527C42884EE9100BD0CE9 /* PreloadWebViewController.h */,
+				5B3527C52884EE9100BD0CE9 /* PreloadWebViewController.m */,
 				5B3527B428816CB100BD0CE9 /* Main.storyboard */,
 				5B3527B728816CB400BD0CE9 /* Assets.xcassets */,
 				5B3527B928816CB400BD0CE9 /* LaunchScreen.storyboard */,
@@ -74,6 +88,15 @@
 				5B3527BD28816CB400BD0CE9 /* main.m */,
 			);
 			path = WebViewDemo;
+			sourceTree = "<group>";
+		};
+		5B3527CA2884F43100BD0CE9 /* WKWebViewTool */ = {
+			isa = PBXGroup;
+			children = (
+				5B3527CB2884F45500BD0CE9 /* TFWebManager.h */,
+				5B3527CC2884F45500BD0CE9 /* TFWebManager.m */,
+			);
+			path = WKWebViewTool;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,7 +169,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B3527CD2884F45500BD0CE9 /* TFWebManager.m in Sources */,
 				5B3527B328816CB100BD0CE9 /* ViewController.m in Sources */,
+				5B3527C92884EEB200BD0CE9 /* WebViewController.m in Sources */,
+				5B3527C62884EE9100BD0CE9 /* PreloadWebViewController.m in Sources */,
 				5B3527AD28816CB100BD0CE9 /* AppDelegate.m in Sources */,
 				5B3527BE28816CB400BD0CE9 /* main.m in Sources */,
 				5B3527B028816CB100BD0CE9 /* SceneDelegate.m in Sources */,
