@@ -32,9 +32,16 @@
     return self;
 }
 
-- (void)showH5:(UIViewController *)vc {
+- (void)loadH5:(NSString *)url inViewController:(UIViewController *)vc {
     
     [vc.view addSubview:self.wkWebView];
+    NSURLRequest *req = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:url]];
+    [self.wkWebView loadRequest:req];
+}
+
+- (void)dispose {
+    
+    [self.wkWebView removeFromSuperview];
 }
 
 #pragma mark -- WKNavigationDelegate

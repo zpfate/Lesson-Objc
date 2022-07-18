@@ -6,6 +6,7 @@
 //
 
 #import "PreloadWebViewController.h"
+#import "WKWebViewTool/TFWebManager.h"
 
 @interface PreloadWebViewController ()
 
@@ -18,6 +19,13 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
 
+    [[TFWebManager manager] loadH5:@"https://juejin.cn/post/6915268111872557069" inViewController:self];
+    
+}
+
+- (void)dealloc {
+    
+    [[TFWebManager manager] dispose];
 }
 
 /*
