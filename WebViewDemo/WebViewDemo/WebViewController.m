@@ -28,9 +28,36 @@
 
 - (void)loadWebView {
     
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"https://juejin.cn/post/6915268111872557069"]];
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://people.mozilla.org/~rnewman/fennec/mem.html"]];
     [self.wkWebView loadRequest:request];
 }
+
+
+#pragma mark -- Delegate
+
+// 页面开始加载时调用
+- (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation {
+    NSLog(@"------页面开始加载时调用");
+}
+
+// 页面加载失败时调用
+- (void)webView:(WKWebView *)webView didFailProvisionalNavigation:(WKNavigation *)navigation withError:(NSError *)error {
+    
+}
+
+// 当内容开始返回时调用
+- (void)webView:(WKWebView *)webView didCommitNavigation:(WKNavigation *)navigation {
+    
+}
+
+// 页面加载完成之后调用
+- (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
+    NSLog(@"------页面加载完成之后调用");
+
+}
+
+
+#pragma mark -- Getter 
 
 
 - (WKWebView *)wkWebView {

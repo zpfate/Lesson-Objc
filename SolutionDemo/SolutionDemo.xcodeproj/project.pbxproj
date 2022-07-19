@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5B4B5AE3288509A100780DA6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B4B5AE2288509A100780DA6 /* main.m */; };
-		5B4B5AEB28852F2C00780DA6 /* QuadraticSolution.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B4B5AEA28852F2C00780DA6 /* QuadraticSolution.m */; };
+		5B4B5AEB28852F2C00780DA6 /* Quadratic.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B4B5AEA28852F2C00780DA6 /* Quadratic.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,8 +26,8 @@
 /* Begin PBXFileReference section */
 		5B4B5ADF288509A100780DA6 /* SolutionDemo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SolutionDemo; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B4B5AE2288509A100780DA6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		5B4B5AE928852F2C00780DA6 /* QuadraticSolution.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuadraticSolution.h; sourceTree = "<group>"; };
-		5B4B5AEA28852F2C00780DA6 /* QuadraticSolution.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuadraticSolution.m; sourceTree = "<group>"; };
+		5B4B5AE928852F2C00780DA6 /* Quadratic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Quadratic.h; sourceTree = "<group>"; };
+		5B4B5AEA28852F2C00780DA6 /* Quadratic.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Quadratic.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				5B4B5AE2288509A100780DA6 /* main.m */,
-				5B4B5AE928852F2C00780DA6 /* QuadraticSolution.h */,
-				5B4B5AEA28852F2C00780DA6 /* QuadraticSolution.m */,
+				5B4B5AE928852F2C00780DA6 /* Quadratic.h */,
+				5B4B5AEA28852F2C00780DA6 /* Quadratic.m */,
 			);
 			path = SolutionDemo;
 			sourceTree = "<group>";
@@ -125,7 +125,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B4B5AE3288509A100780DA6 /* main.m in Sources */,
-				5B4B5AEB28852F2C00780DA6 /* QuadraticSolution.m in Sources */,
+				5B4B5AEB28852F2C00780DA6 /* Quadratic.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

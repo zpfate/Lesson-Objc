@@ -17,9 +17,13 @@
 		5B3527C62884EE9100BD0CE9 /* PreloadWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3527C52884EE9100BD0CE9 /* PreloadWebViewController.m */; };
 		5B3527C92884EEB200BD0CE9 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3527C82884EEB200BD0CE9 /* WebViewController.m */; };
 		5B3527CD2884F45500BD0CE9 /* TFWebManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3527CC2884F45500BD0CE9 /* TFWebManager.m */; };
+		5B4B5B44288687EB00780DA6 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 5B4B5B43288687EB00780DA6 /* index.html */; };
+		ED18D3702323A9F67AF4F86F /* Pods_WebViewDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 786F4A8D2220F58BA90FA4B3 /* Pods_WebViewDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		480212FB19FA5A5EB4514A01 /* Pods-WebViewDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebViewDemo.debug.xcconfig"; path = "Target Support Files/Pods-WebViewDemo/Pods-WebViewDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		5A8233C53C9B73301DF5B8B6 /* Pods-WebViewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebViewDemo.release.xcconfig"; path = "Target Support Files/Pods-WebViewDemo/Pods-WebViewDemo.release.xcconfig"; sourceTree = "<group>"; };
 		5B3527A828816CB100BD0CE9 /* WebViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B3527AB28816CB100BD0CE9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5B3527AC28816CB100BD0CE9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -38,6 +42,8 @@
 		5B3527C82884EEB200BD0CE9 /* WebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		5B3527CB2884F45500BD0CE9 /* TFWebManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFWebManager.h; sourceTree = "<group>"; };
 		5B3527CC2884F45500BD0CE9 /* TFWebManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFWebManager.m; sourceTree = "<group>"; };
+		5B4B5B43288687EB00780DA6 /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		786F4A8D2220F58BA90FA4B3 /* Pods_WebViewDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WebViewDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,17 +51,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED18D3702323A9F67AF4F86F /* Pods_WebViewDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		41D8F745C1FD85516CC89445 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				480212FB19FA5A5EB4514A01 /* Pods-WebViewDemo.debug.xcconfig */,
+				5A8233C53C9B73301DF5B8B6 /* Pods-WebViewDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		5B35279F28816CB100BD0CE9 = {
 			isa = PBXGroup;
 			children = (
 				5B3527AA28816CB100BD0CE9 /* WebViewDemo */,
 				5B3527A928816CB100BD0CE9 /* Products */,
+				41D8F745C1FD85516CC89445 /* Pods */,
+				7CB80E454C4B7B8374793F7B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +88,7 @@
 		5B3527AA28816CB100BD0CE9 /* WebViewDemo */ = {
 			isa = PBXGroup;
 			children = (
+				5B4B5B42288687C700780DA6 /* Resource */,
 				5B3527CA2884F43100BD0CE9 /* WKWebViewTool */,
 				5B3527AB28816CB100BD0CE9 /* AppDelegate.h */,
 				5B3527AC28816CB100BD0CE9 /* AppDelegate.m */,
@@ -99,6 +118,22 @@
 			path = WKWebViewTool;
 			sourceTree = "<group>";
 		};
+		5B4B5B42288687C700780DA6 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				5B4B5B43288687EB00780DA6 /* index.html */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		7CB80E454C4B7B8374793F7B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				786F4A8D2220F58BA90FA4B3 /* Pods_WebViewDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +141,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5B3527C128816CB400BD0CE9 /* Build configuration list for PBXNativeTarget "WebViewDemo" */;
 			buildPhases = (
+				B88DD5024A9D548F3FF52BAA /* [CP] Check Pods Manifest.lock */,
 				5B3527A428816CB100BD0CE9 /* Sources */,
 				5B3527A528816CB100BD0CE9 /* Frameworks */,
 				5B3527A628816CB100BD0CE9 /* Resources */,
+				7151C89490B51136A3E82AFD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -157,12 +194,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B3527BB28816CB400BD0CE9 /* LaunchScreen.storyboard in Resources */,
+				5B4B5B44288687EB00780DA6 /* index.html in Resources */,
 				5B3527B828816CB400BD0CE9 /* Assets.xcassets in Resources */,
 				5B3527B628816CB100BD0CE9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7151C89490B51136A3E82AFD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WebViewDemo/Pods-WebViewDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WebViewDemo/Pods-WebViewDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WebViewDemo/Pods-WebViewDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B88DD5024A9D548F3FF52BAA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WebViewDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5B3527A428816CB100BD0CE9 /* Sources */ = {
@@ -315,6 +395,7 @@
 		};
 		5B3527C228816CB400BD0CE9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 480212FB19FA5A5EB4514A01 /* Pods-WebViewDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -342,6 +423,7 @@
 		};
 		5B3527C328816CB400BD0CE9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A8233C53C9B73301DF5B8B6 /* Pods-WebViewDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

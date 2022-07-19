@@ -1,5 +1,5 @@
 //
-//  QuadraticSolution.h
+//  Quadratic.h
 //  SolutionDemo
 //
 //  Created by Twisted Fate on 2022/7/18.
@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface QuadraticSolution : NSObject
+@interface Quadratic : NSObject
 
 + (void)start;
 

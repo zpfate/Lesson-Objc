@@ -1,13 +1,18 @@
 //
-//  QuadraticSolution.m
+//  Quadratic.m
 //  SolutionDemo
 //
 //  Created by Twisted Fate on 2022/7/18.
 //
 
-#import "QuadraticSolution.h"
+#import "Quadratic.h"
 
-@implementation QuadraticSolution
+@implementation Quadratic
+
+/**
+ * 求一元二次方程的解
+ */
+
 
 + (void)start {
     
@@ -16,10 +21,9 @@
     input: printf("请输入a, b, c \n");
     scanf("%f %f %f", &a, &b, &c);
     if (a == 0) {
-        NSLog(@"输入有误, a不能为0!!! \n");
+        printf("输入有误, a不能为0!!! \n");
         goto input;
     } else {
-     
         float delta = pow(b, 2) - 4 * a * c;
         [self caculateX:a b:b delta:delta];
     }
@@ -37,7 +41,7 @@
         // 该方程无实数根
         float real = -b / (2 * a);
         float imaginary = sqrt(fabs(delta)) / (2 * a);
-        printf("x1 = %.2f + %.2fi, x2 = %.2f - %.2fi \n", real, fabs(imaginary), real, fabs(imaginary));
+        printf("x1 = %.2f + %.2fi, x2 = %.2f - %.2fi \n", real, imaginary, real, imaginary);
     }
 }
 

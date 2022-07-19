@@ -7,6 +7,7 @@
 
 #import "TFWebManager.h"
 #import <WebKit/WebKit.h>
+#import <AFNetworking.h>
 @interface TFWebManager ()<WKUIDelegate, WKNavigationDelegate>
 
 @property (nonatomic, strong) WKWebView *wkWebView;
@@ -27,9 +28,16 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        
+        self.wkWebView.navigationDelegate = self;
+        self.wkWebView.UIDelegate = self;
     }
     return self;
+}
+
+
+- (void)requestH5:(NSString *)url {
+    
+    
 }
 
 - (void)loadH5:(NSString *)url inViewController:(UIViewController *)vc {
@@ -48,7 +56,7 @@
 
 // 页面开始加载时调用
 - (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation {
-    
+    NSLog(@"------页面开始加载时调用");
 }
 
 // 页面加载失败时调用
@@ -63,6 +71,7 @@
 
 // 页面加载完成之后调用
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
+    NSLog(@"------页面加载完成之后调用");
 
 }
 
@@ -84,6 +93,7 @@
     // 自己定义的协议头
     NSString *htmlHeadString = @"github://";
     if([urlStr hasPrefix:htmlHeadString]){
+        
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"通过截取URL调用OC" message:@"你想前往我的Github主页?" preferredStyle:UIAlertControllerStyleAlert];
         [alertController addAction:([UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         }])];
@@ -212,8 +222,7 @@
         configuration.userContentController = wkUController;
         
         _wkWebView = [[WKWebView alloc] initWithFrame:[[UIScreen mainScreen] bounds]  configuration:configuration];
-        _wkWebView.navigationDelegate = self;
-        _wkWebView.UIDelegate = self;
+ 
     }
     return _wkWebView;
 }

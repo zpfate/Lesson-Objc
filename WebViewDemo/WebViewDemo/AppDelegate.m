@@ -6,6 +6,7 @@
 //
 
 #import "AppDelegate.h"
+#import "WKWebViewTool/TFWebManager.h"
 
 @interface AppDelegate ()
 
@@ -16,6 +17,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [TFWebManager manager];
     return YES;
 }
 
