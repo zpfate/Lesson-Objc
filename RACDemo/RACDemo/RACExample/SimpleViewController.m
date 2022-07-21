@@ -48,8 +48,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    NSString *key = self.data.allKeys[indexPath.row];
-    SEL sel = NSSelectorFromString(self.data[key]);
+    NSString *example = self.data[indexPath.row];
+    
+    SEL sel = NSSelectorFromString(example);
     
     if ([self respondsToSelector:sel]) {
 #pragma clang diagnostic push
@@ -61,8 +62,8 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(UITableViewCell.class) forIndexPath:indexPath];
-    NSString *key = self.data.allKeys[indexPath.row];
-    cell.textLabel.text = key;
+    NSString *example = self.data[indexPath.row];
+    cell.textLabel.text = example;
     return cell;
 }
 
