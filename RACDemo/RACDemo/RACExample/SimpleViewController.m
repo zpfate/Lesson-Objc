@@ -35,6 +35,7 @@
     
     self.data = @[
         @"RACSignal",
+        @"RACSubject"
     ];
     
     [self.view addSubview:self.tableView];
@@ -46,8 +47,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
     NSString *key = self.data.allKeys[indexPath.row];
     SEL sel = NSSelectorFromString(self.data[key]);
+    
     if ([self respondsToSelector:sel]) {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"

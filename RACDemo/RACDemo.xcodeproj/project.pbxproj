@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B0E8CF02888F56700612500 /* RACExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0E8CEF2888F56700612500 /* RACExample.m */; };
 		5B4826D328517FB200B17593 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B4826D228517FB200B17593 /* AppDelegate.m */; };
 		5B4826D628517FB200B17593 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B4826D528517FB200B17593 /* SceneDelegate.m */; };
 		5B4826DC28517FB200B17593 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B4826DA28517FB200B17593 /* Main.storyboard */; };
@@ -31,6 +32,8 @@
 		08B05F8A09F0FCF8253348E1 /* Pods_RACDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RACDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		123BBE00E29D87AD572115DB /* Pods-RACDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACDemo.release.xcconfig"; path = "Target Support Files/Pods-RACDemo/Pods-RACDemo.release.xcconfig"; sourceTree = "<group>"; };
 		531E56A8BE165BA825E78B78 /* Pods-RACDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACDemo.debug.xcconfig"; path = "Target Support Files/Pods-RACDemo/Pods-RACDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		5B0E8CEE2888F56700612500 /* RACExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACExample.h; sourceTree = "<group>"; };
+		5B0E8CEF2888F56700612500 /* RACExample.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACExample.m; sourceTree = "<group>"; };
 		5B4826CE28517FB200B17593 /* RACDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RACDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B4826D128517FB200B17593 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5B4826D228517FB200B17593 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -77,6 +80,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B0E8CED2888EA1000612500 /* RACExample */ = {
+			isa = PBXGroup;
+			children = (
+				5B5B47302856D43C003E6BBE /* SimpleViewController.h */,
+				5B5B47312856D43C003E6BBE /* SimpleViewController.m */,
+				5B0E8CEE2888F56700612500 /* RACExample.h */,
+				5B0E8CEF2888F56700612500 /* RACExample.m */,
+			);
+			path = RACExample;
+			sourceTree = "<group>";
+		};
 		5B3C2074286B050300439B4D /* Subject */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +132,7 @@
 		5B4826D028517FB200B17593 /* RACDemo */ = {
 			isa = PBXGroup;
 			children = (
+				5B0E8CED2888EA1000612500 /* RACExample */,
 				5B3C2075286B053100439B4D /* ChainProgramming */,
 				5B3C2074286B050300439B4D /* Subject */,
 				5BA5A46F28654B4D00E1629B /* Login */,
@@ -126,8 +141,6 @@
 				5B4826D228517FB200B17593 /* AppDelegate.m */,
 				5B5B472D2856CA19003E6BBE /* HomeViewController.h */,
 				5B5B472E2856CA19003E6BBE /* HomeViewController.m */,
-				5B5B47302856D43C003E6BBE /* SimpleViewController.h */,
-				5B5B47312856D43C003E6BBE /* SimpleViewController.m */,
 				5B9A43DB2872EAE300725533 /* Person.h */,
 				5B9A43DC2872EAE300725533 /* Person.m */,
 				5B9A43D42872D2A800725533 /* KVOViewController.h */,
@@ -294,6 +307,7 @@
 				5B5B47322856D43C003E6BBE /* SimpleViewController.m in Sources */,
 				5B4826D328517FB200B17593 /* AppDelegate.m in Sources */,
 				5B5B474128570E56003E6BBE /* DelegateNextViewController.m in Sources */,
+				5B0E8CF02888F56700612500 /* RACExample.m in Sources */,
 				5B9A43D62872D2A800725533 /* KVOViewController.m in Sources */,
 				5B4826E428517FB400B17593 /* main.m in Sources */,
 				5B5B472F2856CA19003E6BBE /* HomeViewController.m in Sources */,
