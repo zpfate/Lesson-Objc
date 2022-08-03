@@ -7,12 +7,14 @@
 
 #import "SimpleViewController.h"
 #import "Person.h"
-
+#import "RACExample.h"
 @interface SimpleViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
 
 @property (nonatomic, strong) NSArray *data;
+
+@property (nonatomic, strong) RACExample *example;
 
 @end
 
@@ -35,7 +37,12 @@
     
     self.data = @[
         @"RACSignal",
-        @"RACSubject"
+        @"RACSubject",
+        @"RACReplaySubject",
+        @"RACTuple_RACSequence",
+        @"RACCommand",
+        @"",
+        @"",
     ];
     
     [self.view addSubview:self.tableView];
@@ -48,14 +55,15 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    NSString *example = self.data[indexPath.row];
+    NSString *methodName = self.data[indexPath.row];
+    methodName = [NSString stringWithFormat:@"__%@", methodName];
     
-    SEL sel = NSSelectorFromString(example);
-    
-    if ([self respondsToSelector:sel]) {
+    SEL sel = NSSelectorFromString(methodName);
+
+    if ([self.example respondsToSelector:sel]) {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
-        [self performSelector:sel];
+         [self.example performSelector:sel];
 #pragma clang diagnostic pop
     }
 }
@@ -81,5 +89,11 @@
     return _tableView;
 }
 
+- (RACExample *)example {
+    if (!_example) {
+        _example = [RACExample new];
+    }
+    return _example;
+}
 
 @end

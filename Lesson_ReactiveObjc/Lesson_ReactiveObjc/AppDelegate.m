@@ -1,12 +1,12 @@
 //
 //  AppDelegate.m
-//  RACDemo
+//  Lesson_ReactiveObjc
 //
-//  Created by Twisted Fate on 2022/6/9.
+//  Created by Twisted Fate on 2022/7/22.
 //
 
 #import "AppDelegate.h"
-#import "CaculatorManager.h"
+
 @interface AppDelegate ()
 
 @end
@@ -16,15 +16,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
-//    CaculatorMaker *maker = [CaculatorMaker new];
-//    maker.add(5).minus(3).printResult();
-   
-    /// 链式编程
-//    [CaculatorMaker makeCaculator:^(CaculatorMaker * _Nonnull make) {
-//        make.add(5).minus(3).printResult();
-//    }];
-    
     return YES;
 }
 
