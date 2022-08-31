@@ -6,8 +6,10 @@
 //
 
 #import "ViewController.h"
-
+#import "FaceIDUsage.h"
 @interface ViewController ()
+
+
 
 @end
 
@@ -16,6 +18,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+
+- (IBAction)configure:(id)sender {
+    
+    [[FaceIDUsage shared] configre];
+    
 }
 
 
