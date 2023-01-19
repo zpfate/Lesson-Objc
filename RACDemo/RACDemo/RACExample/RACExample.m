@@ -29,6 +29,11 @@
         }];
     }];
     
+    
+    
+    
+    
+    
     /// 订阅信号
     [signal subscribeNext:^(id  _Nullable x) {
         NSLog(@"接收到信号:%@", x);
