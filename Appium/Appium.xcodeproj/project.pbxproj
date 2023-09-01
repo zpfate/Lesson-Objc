@@ -3,37 +3,27 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5B90E02F2A88F40F000D8313 /* EBRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B90E02E2A88F40F000D8313 /* EBRouter.m */; };
-		5BFE856127F150C300C6BA26 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BFE856027F150C300C6BA26 /* AppDelegate.m */; };
-		5BFE856427F150C300C6BA26 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BFE856327F150C300C6BA26 /* ViewController.m */; };
-		5BFE856627F150C600C6BA26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BFE856527F150C600C6BA26 /* Assets.xcassets */; };
-		5BFE856927F150C600C6BA26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BFE856727F150C600C6BA26 /* Main.storyboard */; };
-		5BFE856B27F150C600C6BA26 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BFE856A27F150C600C6BA26 /* main.m */; };
-		5BFE857427F150D700C6BA26 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BFE857327F150D700C6BA26 /* Person.m */; };
+		5BAFAE072AA217DE005D5D8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAFAE062AA217DE005D5D8F /* AppDelegate.swift */; };
+		5BAFAE092AA217DE005D5D8F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAFAE082AA217DE005D5D8F /* ViewController.swift */; };
+		5BAFAE0B2AA217E0005D5D8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BAFAE0A2AA217E0005D5D8F /* Assets.xcassets */; };
+		5BAFAE0E2AA217E0005D5D8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BAFAE0C2AA217E0005D5D8F /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5B90E02D2A88F40F000D8313 /* EBRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EBRouter.h; sourceTree = "<group>"; };
-		5B90E02E2A88F40F000D8313 /* EBRouter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EBRouter.m; sourceTree = "<group>"; };
-		5BFE855C27F150C300C6BA26 /* AppDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		5BFE855F27F150C300C6BA26 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		5BFE856027F150C300C6BA26 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		5BFE856227F150C300C6BA26 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		5BFE856327F150C300C6BA26 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		5BFE856527F150C600C6BA26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5BFE856827F150C600C6BA26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		5BFE856A27F150C600C6BA26 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		5BFE856C27F150C600C6BA26 /* AppDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppDemo.entitlements; sourceTree = "<group>"; };
-		5BFE857227F150D700C6BA26 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
-		5BFE857327F150D700C6BA26 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		5BAFAE032AA217DE005D5D8F /* Appium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Appium.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BAFAE062AA217DE005D5D8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5BAFAE082AA217DE005D5D8F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5BAFAE0A2AA217E0005D5D8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5BAFAE0D2AA217E0005D5D8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5BAFAE0F2AA217E0005D5D8F /* Appium.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Appium.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5BFE855927F150C300C6BA26 /* Frameworks */ = {
+		5BAFAE002AA217DE005D5D8F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -43,125 +33,116 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5BFE855327F150C300C6BA26 = {
+		5BAFADFA2AA217DE005D5D8F = {
 			isa = PBXGroup;
 			children = (
-				5BFE855E27F150C300C6BA26 /* AppDemo */,
-				5BFE855D27F150C300C6BA26 /* Products */,
+				5BAFAE052AA217DE005D5D8F /* Appium */,
+				5BAFAE042AA217DE005D5D8F /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		5BFE855D27F150C300C6BA26 /* Products */ = {
+		5BAFAE042AA217DE005D5D8F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5BFE855C27F150C300C6BA26 /* AppDemo.app */,
+				5BAFAE032AA217DE005D5D8F /* Appium.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5BFE855E27F150C300C6BA26 /* AppDemo */ = {
+		5BAFAE052AA217DE005D5D8F /* Appium */ = {
 			isa = PBXGroup;
 			children = (
-				5BFE855F27F150C300C6BA26 /* AppDelegate.h */,
-				5BFE856027F150C300C6BA26 /* AppDelegate.m */,
-				5BFE857227F150D700C6BA26 /* Person.h */,
-				5BFE857327F150D700C6BA26 /* Person.m */,
-				5B90E02D2A88F40F000D8313 /* EBRouter.h */,
-				5B90E02E2A88F40F000D8313 /* EBRouter.m */,
-				5BFE856227F150C300C6BA26 /* ViewController.h */,
-				5BFE856327F150C300C6BA26 /* ViewController.m */,
-				5BFE856527F150C600C6BA26 /* Assets.xcassets */,
-				5BFE856727F150C600C6BA26 /* Main.storyboard */,
-				5BFE856A27F150C600C6BA26 /* main.m */,
-				5BFE856C27F150C600C6BA26 /* AppDemo.entitlements */,
+				5BAFAE062AA217DE005D5D8F /* AppDelegate.swift */,
+				5BAFAE082AA217DE005D5D8F /* ViewController.swift */,
+				5BAFAE0A2AA217E0005D5D8F /* Assets.xcassets */,
+				5BAFAE0C2AA217E0005D5D8F /* Main.storyboard */,
+				5BAFAE0F2AA217E0005D5D8F /* Appium.entitlements */,
 			);
-			path = AppDemo;
+			path = Appium;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5BFE855B27F150C300C6BA26 /* AppDemo */ = {
+		5BAFAE022AA217DE005D5D8F /* Appium */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5BFE856F27F150C600C6BA26 /* Build configuration list for PBXNativeTarget "AppDemo" */;
+			buildConfigurationList = 5BAFAE122AA217E0005D5D8F /* Build configuration list for PBXNativeTarget "Appium" */;
 			buildPhases = (
-				5BFE855827F150C300C6BA26 /* Sources */,
-				5BFE855927F150C300C6BA26 /* Frameworks */,
-				5BFE855A27F150C300C6BA26 /* Resources */,
+				5BAFADFF2AA217DE005D5D8F /* Sources */,
+				5BAFAE002AA217DE005D5D8F /* Frameworks */,
+				5BAFAE012AA217DE005D5D8F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = AppDemo;
-			productName = AppDemo;
-			productReference = 5BFE855C27F150C300C6BA26 /* AppDemo.app */;
+			name = Appium;
+			productName = Appium;
+			productReference = 5BAFAE032AA217DE005D5D8F /* Appium.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		5BFE855427F150C300C6BA26 /* Project object */ = {
+		5BAFADFB2AA217DE005D5D8F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastUpgradeCheck = 1320;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
 				TargetAttributes = {
-					5BFE855B27F150C300C6BA26 = {
-						CreatedOnToolsVersion = 13.2.1;
+					5BAFAE022AA217DE005D5D8F = {
+						CreatedOnToolsVersion = 14.2;
 					};
 				};
 			};
-			buildConfigurationList = 5BFE855727F150C300C6BA26 /* Build configuration list for PBXProject "AppDemo" */;
-			compatibilityVersion = "Xcode 13.0";
+			buildConfigurationList = 5BAFADFE2AA217DE005D5D8F /* Build configuration list for PBXProject "Appium" */;
+			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 5BFE855327F150C300C6BA26;
-			productRefGroup = 5BFE855D27F150C300C6BA26 /* Products */;
+			mainGroup = 5BAFADFA2AA217DE005D5D8F;
+			productRefGroup = 5BAFAE042AA217DE005D5D8F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5BFE855B27F150C300C6BA26 /* AppDemo */,
+				5BAFAE022AA217DE005D5D8F /* Appium */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		5BFE855A27F150C300C6BA26 /* Resources */ = {
+		5BAFAE012AA217DE005D5D8F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BFE856627F150C600C6BA26 /* Assets.xcassets in Resources */,
-				5BFE856927F150C600C6BA26 /* Main.storyboard in Resources */,
+				5BAFAE0B2AA217E0005D5D8F /* Assets.xcassets in Resources */,
+				5BAFAE0E2AA217E0005D5D8F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		5BFE855827F150C300C6BA26 /* Sources */ = {
+		5BAFADFF2AA217DE005D5D8F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B90E02F2A88F40F000D8313 /* EBRouter.m in Sources */,
-				5BFE856427F150C300C6BA26 /* ViewController.m in Sources */,
-				5BFE856B27F150C600C6BA26 /* main.m in Sources */,
-				5BFE857427F150D700C6BA26 /* Person.m in Sources */,
-				5BFE856127F150C300C6BA26 /* AppDelegate.m in Sources */,
+				5BAFAE092AA217DE005D5D8F /* ViewController.swift in Sources */,
+				5BAFAE072AA217DE005D5D8F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		5BFE856727F150C600C6BA26 /* Main.storyboard */ = {
+		5BAFAE0C2AA217E0005D5D8F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				5BFE856827F150C600C6BA26 /* Base */,
+				5BAFAE0D2AA217E0005D5D8F /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -169,14 +150,13 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		5BFE856D27F150C600C6BA26 /* Debug */ = {
+		5BAFAE102AA217E0005D5D8F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -220,22 +200,23 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MACOSX_DEPLOYMENT_TARGET = 12.6;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		5BFE856E27F150C600C6BA26 /* Release */ = {
+		5BAFAE112AA217E0005D5D8F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -273,19 +254,21 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MACOSX_DEPLOYMENT_TARGET = 12.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
 			name = Release;
 		};
-		5BFE857027F150C600C6BA26 /* Debug */ = {
+		5BAFAE132AA217E0005D5D8F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = AppDemo/AppDemo.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Appium/Appium.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -300,18 +283,19 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.twistedfate.www.AppDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.TwistedFate.www.Appium;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		5BFE857127F150C600C6BA26 /* Release */ = {
+		5BAFAE142AA217E0005D5D8F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = AppDemo/AppDemo.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Appium/Appium.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -326,34 +310,35 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.twistedfate.www.AppDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.TwistedFate.www.Appium;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5BFE855727F150C300C6BA26 /* Build configuration list for PBXProject "AppDemo" */ = {
+		5BAFADFE2AA217DE005D5D8F /* Build configuration list for PBXProject "Appium" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5BFE856D27F150C600C6BA26 /* Debug */,
-				5BFE856E27F150C600C6BA26 /* Release */,
+				5BAFAE102AA217E0005D5D8F /* Debug */,
+				5BAFAE112AA217E0005D5D8F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5BFE856F27F150C600C6BA26 /* Build configuration list for PBXNativeTarget "AppDemo" */ = {
+		5BAFAE122AA217E0005D5D8F /* Build configuration list for PBXNativeTarget "Appium" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5BFE857027F150C600C6BA26 /* Debug */,
-				5BFE857127F150C600C6BA26 /* Release */,
+				5BAFAE132AA217E0005D5D8F /* Debug */,
+				5BAFAE142AA217E0005D5D8F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 5BFE855427F150C300C6BA26 /* Project object */;
+	rootObject = 5BAFADFB2AA217DE005D5D8F /* Project object */;
 }
