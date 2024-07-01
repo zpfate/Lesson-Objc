@@ -11,4 +11,10 @@
 - (void)print {
     NSLog(@"%@", self.name);
 }
+
+
+- (void)dealloc
+{
+    NSLog(@"person dealloc");
+}
 @end
