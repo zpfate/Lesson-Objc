@@ -27,44 +27,87 @@ final class XCUITEST: XCTestCase {
         let app = XCUIApplication(bundleIdentifier: "com.apple.shortcuts")
         app.launch()
 
+        /// 发送短息按下
         let btns = app.buttons["批量一键发送"]
         let edit = btns.buttons.element(boundBy: 0)
         edit.tap()
-        
-        let textviews = app.textViews
-        
-        let phone = textviews.element(boundBy: 2)
+
+        let scrollview = app.scrollViews.element(boundBy: 0)
+        scrollview.swipeUp(velocity: XCUIGestureVelocity.init(100))
+
+        app.waitForExistence(timeout: 3)
+
+
+        let textviews = app.textViews.element(matching: NSPredicate(format: "placeholderValue == '文本'"))
+        let phone = textviews.firstMatch
         phone.tap()
-        phone.typeText("+17204214188\n+17204724360\n")
-        
-//        let done = app.buttons["完成"]
-//        XCTAssertTrue(done.waitForExistence(timeout: 10), "按钮未出现")
+        phone.typeText("\u{8}") // 发送退格字符来清除文本
+        phone.typeText("+17204214188\n+17204724360")
+        // 输入手机号后点完成
+        let done = app.buttons["完成"]
+
+        XCTAssertTrue(done.waitForExistence(timeout: 10), "按钮未出现")
 
         let firstButton = app.navigationBars.buttons["完成"]
         firstButton.tap()
         
         
         btns.tap()
-
-        app.waitForExistence(timeout: 3)
+     
+        let alert = app.alerts.element
+        if alert.exists {
+            print("有太难看")
+        }
         
-        let textview = app.windows.textViews["文本"]
-        textview.typeText("this is a test")
+        let pop = app.popovers.element
+        if pop.exists {
+            print("有太难看1")
+        }
         
-        let send = app.buttons["完成"]
-        send.tap()
+        let dia = app.dialogs.element
+        if dia.exists {
+            print("有太难看2")
+        }
         
+        let sheets = app.sheets.element
+        if sheets.exists {
+            print("有太难看3")
+        }
         
-//        let newBtns = app.buttons
-//        print("======\(newBtns.count)")
+        let drawers = app.drawers.element
+        if drawers.exists {
+            print("有太难看4")
+        }
+        
+        let popUpButtons = app.popUpButtons.element
+        if popUpButtons.exists {
+            print("有太难看4")
+        }
+        
+        let touchBars = app.touchBars.element
+        if touchBars.exists {
+            print("有太难看4")
+        }
+        
+        let groups = app.groups.element
+        if groups.exists {
+            print("有太难看4")
+        }
+        
+//        let groups = app.element
+//        if groups.exists {
+//            print("有太难看4")
+//        }
+//        let window = XCUIApplication.popovers
+//        let text = window.textViews.element(boundBy: 0)
+//        text.typeText("this is a test")
 //
-//        newBtns.element(boundBy: newBtns.count - 1).tap()
+//        let send = window.buttons["完成"]
+//        send.tap()
+        
+        
 
-        // 输入短信文本
-//        let textviews = app.textViews
-//        let messageTextView = textviews.element(boundBy: 1) // 捷径 App 中的文本视图
-//        messageTextView.tap()
-//        messageTextView.typeText("12345678") // 替换为实际的文本
+    
 
 
         
