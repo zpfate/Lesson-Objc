@@ -14,12 +14,19 @@ int main(int argc, const char * argv[]) {
         // insert code here...
         
         
-        __block Person *p = [[Person alloc] init];
+        NSLog(@"1----%@, %@", [NSObject alloc], [NSObject new]);
+        
+        Person *p = [[Person alloc] init];
+        [p blockDemo];
+        
+        
+        
+        
         p.age = 20;
-        p.block = ^{
-            NSLog(@"age is %zd", p.age);
-            p = nil;
-        };
+//        p.block = ^{
+//            NSLog(@"age is %zd", p.age);
+//            p = nil;
+//        };
         p.block();
         
         
@@ -40,7 +47,8 @@ int main(int argc, const char * argv[]) {
             NSLog(@"stackBlock=%zd", num);
 
         } class]);
-
+        
+        
         
     }
     return 0;

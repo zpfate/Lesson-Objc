@@ -6,7 +6,7 @@
 //
 
 #import "ViewController.h"
-#import "BaseDemo.h"
+//#import "BaseDemo.h"
 #import "Locks/OSSpinLockDemo.h"
 #import "Locks/OSUnfairLockDemo.h"
 #import "Locks/PthreadMutexDemo.h"
@@ -28,14 +28,21 @@
     
 //    [self gcdGroup];
 
-    SemaphoreDemo *demo = [[SemaphoreDemo alloc] init];
-    [demo ticketTest];
+//    SemaphoreDemo *demo = [[SemaphoreDemo alloc] init];
+//    [demo ticketTest];
 //    NSLog(@"----------------");
-    [demo moneyTest];
+//    [demo moneyTest];
     
 //    [demo otherTest];
-}
+    
+    dispatch_queue_t queue = dispatch_queue_create("group", DISPATCH_QUEUE_CONCURRENT);
 
+    dispatch_async(queue, ^{
+        NSLog(@"dispatch_sync2");
+    });
+    NSLog(@"dispatch_sync1");
+
+}
 
 
 

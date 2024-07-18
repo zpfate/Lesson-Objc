@@ -13,10 +13,27 @@
     return [NSString stringWithFormat:@"name = %@, age = %zd", self.name, self.age];
 }
 
+
+- (void)blockDemo {
+    NSObject *a = [[NSObject alloc] init];
+    void(^__weak weakBlock)(void) = nil;
+    {
+        void(^strongBlock)(void) = ^{
+            NSLog(@"---%@", a);
+        };
+        weakBlock = strongBlock;
+        NSLog(@"1 - %@ - %@",weakBlock,strongBlock);
+    }
+    weakBlock();
+}
+
+
+
+
 - (void)call {
     __weak typeof(self) weakSelf = self;
     self.block = ^{
-        NSLog(@"age is %zd", weakSelf->_age);
+//        NSLog(@"age is %zd", weakSelf->_age);
 
     };
 }
